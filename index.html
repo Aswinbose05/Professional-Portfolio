@@ -1,749 +1,1883 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Aswin B – Software Developer, Full Stack Developer, AI Engineer, Generative AI Developer. Fresher building intelligent AI systems, agentic workflows, and scalable software solutions." />
-  <meta name="keywords" content="Aswin B, AI Engineer, Generative AI, LangChain, LangGraph, RAG, Full Stack Developer, Python, Java, Spring Boot" />
+
+  <meta
+    name="description"
+    content="Aswin B – AI Engineer and Software Developer building Generative AI, Agentic AI, RAG systems and scalable software applications."
+  />
+
+  <meta
+    name="keywords"
+    content="Aswin B, AI Engineer, Generative AI, Agentic AI, RAG, LangGraph, LangChain, CrewAI, Python, Java, Spring Boot"
+  />
+
   <meta name="author" content="Aswin B" />
+
   <meta property="og:title" content="Aswin B | AI Engineer Portfolio" />
-  <meta property="og:description" content="Building Intelligent AI Systems, Agentic Workflows, and Scalable Software Solutions." />
+  <meta
+    property="og:description"
+    content="AI Engineer building Generative AI, Agentic AI, RAG systems and scalable software."
+  />
   <meta property="og:type" content="website" />
+
   <title>Aswin B | AI Engineer Portfolio</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<!-- Loading Screen -->
-<div id="loader" aria-hidden="true">
-  <div class="loader-inner">
-    <div class="loader-ring"></div>
-    <span class="loader-text mono">INITIALIZING<span class="blink">_</span></span>
-  </div>
-</div>
+  <!-- ================= LOADER ================= -->
 
-<!-- Particle Canvas -->
-<canvas id="particles" aria-hidden="true"></canvas>
-
-<!-- Navigation -->
-<nav id="navbar" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="#hero" class="nav-logo" aria-label="Aswin B Home">
-      <span class="mono">&lt;</span>AB<span class="mono">/&gt;</span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks" role="list">
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#certifications" class="nav-link">Certs</a></li>
-      <li><a href="#education" class="nav-link">Education</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-      <li><a href="Aswin_B_Resume.pdf" download class="btn btn-sm">Resume</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- Hero Section -->
-<section id="hero" class="hero" aria-labelledby="hero-name">
-  <div class="hero-content">
-    <p class="hero-eyebrow mono"><span class="dot"></span> Available for opportunities</p>
-    <h1 id="hero-name" class="hero-name">Aswin B</h1>
-    <div class="hero-roles">
-      <span class="mono grad-text" id="typed-role"></span>
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <span class="loader-text mono">
+        INITIALIZING<span class="blink">_</span>
+      </span>
     </div>
-    <p class="hero-tagline">Building Intelligent AI Systems, Agentic Workflows,<br class="hide-mobile"> and Scalable Software Solutions.</p>
-    <div class="hero-actions">
-      <a href="Aswin_B_Resume.pdf" download class="btn btn-primary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-        Download Resume
+  </div>
+
+  <!-- ================= PARTICLES ================= -->
+
+  <canvas id="particles"></canvas>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav id="navbar">
+    <div class="nav-inner">
+
+      <a href="#hero" class="nav-logo">
+        <span class="mono">&lt;</span>AB<span class="mono">/&gt;</span>
       </a>
-      <a href="#contact" class="btn btn-outline">Let's Talk</a>
-    </div>
-    <div class="hero-socials">
-      <a href="https://linkedin.com/in/aswinbose05" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-link">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-      </a>
-      <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="social-link">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-      </a>
-      <a href="mailto:aswinbose05@gmail.com" aria-label="Email Aswin" class="social-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      </a>
-    </div>
-  </div>
-  <div class="hero-visual" aria-hidden="true">
-    <div class="avatar-ring">
-      <div class="avatar-placeholder">
-        <span>AB</span>
-      </div>
-      <div class="ring r1"></div>
-      <div class="ring r2"></div>
-      <div class="ring r3"></div>
-    </div>
-    <div class="float-badge b1 mono">Python</div>
-    <div class="float-badge b2 mono">LangGraph</div>
-    <div class="float-badge b3 mono">RAG</div>
-    <div class="float-badge b4 mono">CrewAI</div>
-  </div>
-  <div class="hero-scroll" aria-hidden="true">
-    <div class="scroll-line"></div>
-    <span class="mono">scroll</span>
-  </div>
-</section>
 
-<!-- About Section -->
-<section id="about" class="section" aria-labelledby="about-heading">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag mono">01 / about</span>
-      <h2 id="about-heading">About Me</h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p class="lead">Fresher AI Engineer passionate about <strong>Generative AI</strong>, <strong>Agentic AI</strong>, Large Language Models, and Full Stack Development.</p>
-        <p>I hold a B.E. in Computer Science Engineering (graduating 2026) with a strong foundation in Python, Java, SQL, Machine Learning, LangChain, LangGraph, RAG, Vector Databases, and Cloud Technologies.</p>
-        <p>I'm driven by building intelligent AI applications that solve real-world problems — from agentic workflows that reason and act autonomously, to production-ready full-stack systems.</p>
-        <div class="about-stats">
-          <div class="stat">
-            <span class="stat-num grad-text">5+</span>
-            <span class="stat-label">Projects Built</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num grad-text">5</span>
-            <span class="stat-label">Certifications</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num grad-text">7.9</span>
-            <span class="stat-label">CGPA / 10</span>
-          </div>
-        </div>
-      </div>
-      <div class="about-cards reveal">
-        <div class="info-card glass">
-          <div class="info-icon">🧠</div>
-          <h3>AI Focus</h3>
-          <p>LLMs, RAG, Agentic AI, Prompt Engineering, LangChain, LangGraph, CrewAI</p>
-        </div>
-        <div class="info-card glass">
-          <div class="info-icon">⚙️</div>
-          <h3>Engineering</h3>
-          <p>Java, Spring Boot, REST APIs, MVC Architecture, OOP, Database Management</p>
-        </div>
-        <div class="info-card glass">
-          <div class="info-icon">🌐</div>
-          <h3>Full Stack</h3>
-          <p>HTML, CSS, JavaScript, MySQL, API Integration, Scalable App Development</p>
-        </div>
-        <div class="info-card glass">
-          <div class="info-icon">☁️</div>
-          <h3>Cloud & Tools</h3>
-          <p>AWS, Docker, Git, GitHub, VS Code, IntelliJ IDEA, Jenkins, Maven</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-<!-- Skills Section -->
-<section id="skills" class="section section-alt" aria-labelledby="skills-heading">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag mono">02 / skills</span>
-      <h2 id="skills-heading">Technical Skills</h2>
-    </div>
-    <div class="skills-grid">
+      <ul class="nav-links" id="navLinks">
 
-      <div class="skill-group glass reveal">
-        <div class="skill-group-header">
-          <span class="skill-icon">💻</span>
-          <h3>Programming Languages</h3>
-        </div>
-        <div class="skill-pills">
-          <span class="pill">Python</span>
-          <span class="pill">Java</span>
-          <span class="pill">JavaScript</span>
-          <span class="pill">SQL</span>
-        </div>
-        <div class="skill-bars">
-          <div class="skill-bar-item"><span>Python</span><div class="bar"><div class="bar-fill" data-pct="90"></div></div><span class="pct">90%</span></div>
-          <div class="skill-bar-item"><span>Java</span><div class="bar"><div class="bar-fill" data-pct="85"></div></div><span class="pct">85%</span></div>
-          <div class="skill-bar-item"><span>JavaScript</span><div class="bar"><div class="bar-fill" data-pct="75"></div></div><span class="pct">75%</span></div>
-          <div class="skill-bar-item"><span>SQL</span><div class="bar"><div class="bar-fill" data-pct="80"></div></div><span class="pct">80%</span></div>
-        </div>
-      </div>
+        <li>
+          <a href="#about" class="nav-link">About</a>
+        </li>
 
-      <div class="skill-group glass reveal">
-        <div class="skill-group-header">
-          <span class="skill-icon">🤖</span>
-          <h3>AI & Machine Learning</h3>
-        </div>
-        <div class="skill-pills">
-          <span class="pill accent">Generative AI</span>
-          <span class="pill accent">LLMs</span>
-          <span class="pill accent">LangChain</span>
-          <span class="pill accent">LangGraph</span>
-          <span class="pill accent">RAG</span>
-          <span class="pill accent">CrewAI</span>
-          <span class="pill accent">AI Agents</span>
-          <span class="pill accent">Prompt Engineering</span>
-          <span class="pill accent">Vector Databases</span>
-        </div>
-        <div class="skill-bars">
-          <div class="skill-bar-item"><span>LangChain / LangGraph</span><div class="bar"><div class="bar-fill accent-fill" data-pct="85"></div></div><span class="pct">85%</span></div>
-          <div class="skill-bar-item"><span>RAG Systems</span><div class="bar"><div class="bar-fill accent-fill" data-pct="88"></div></div><span class="pct">88%</span></div>
-          <div class="skill-bar-item"><span>Prompt Engineering</span><div class="bar"><div class="bar-fill accent-fill" data-pct="82"></div></div><span class="pct">82%</span></div>
-        </div>
-      </div>
+        <li>
+          <a href="#skills" class="nav-link">Skills</a>
+        </li>
 
-      <div class="skill-group glass reveal">
-        <div class="skill-group-header">
-          <span class="skill-icon">🌐</span>
-          <h3>Web Development</h3>
-        </div>
-        <div class="skill-pills">
-          <span class="pill cyan">HTML</span>
-          <span class="pill cyan">CSS</span>
-          <span class="pill cyan">JavaScript</span>
-          <span class="pill cyan">Spring Boot</span>
-          <span class="pill cyan">REST APIs</span>
-          <span class="pill cyan">FastAPI</span>
-        </div>
-        <div class="skill-bars">
-          <div class="skill-bar-item"><span>Spring Boot / REST</span><div class="bar"><div class="bar-fill cyan-fill" data-pct="85"></div></div><span class="pct">85%</span></div>
-          <div class="skill-bar-item"><span>HTML / CSS / JS</span><div class="bar"><div class="bar-fill cyan-fill" data-pct="80"></div></div><span class="pct">80%</span></div>
-        </div>
-      </div>
+        <li>
+          <a href="#projects" class="nav-link">Projects</a>
+        </li>
 
-      <div class="skill-group glass reveal">
-        <div class="skill-group-header">
-          <span class="skill-icon">☁️</span>
-          <h3>Cloud, DB & Tools</h3>
-        </div>
-        <div class="skill-pills">
-          <span class="pill">MySQL</span>
-          <span class="pill">ChromaDB</span>
-          <span class="pill">AWS</span>
-          <span class="pill">Docker</span>
-          <span class="pill">Git</span>
-          <span class="pill">GitHub</span>
-          <span class="pill">Jenkins</span>
-          <span class="pill">Maven</span>
-          <span class="pill">VS Code</span>
-        </div>
-      </div>
+        <li>
+          <a href="#certifications" class="nav-link">Certifications</a>
+        </li>
 
-    </div>
-    <!-- Add new skill group here -->
-  </div>
-</section>
+        <li>
+          <a href="#education" class="nav-link">Education</a>
+        </li>
 
-<!-- Projects Section -->
-<section id="projects" class="section" aria-labelledby="projects-heading">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag mono">03 / projects</span>
-      <h2 id="projects-heading">Featured Projects</h2>
-    </div>
-    <div class="filter-bar" role="group" aria-label="Filter projects">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="ai">AI / ML</button>
-      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-    </div>
-    <div class="projects-grid" id="projectsGrid">
+        <li>
+          <a href="#experience" class="nav-link">Experience</a>
+        </li>
 
-      <!-- Project 1 -->
-      <article class="project-card glass reveal" data-category="ai" aria-labelledby="proj1-title">
-        <div class="project-top">
-          <div class="project-icon">🦾</div>
-          <div class="project-links">
-            <a href="https://github.com/Aswinbose05/LangGraph-OmniAgent-Hybrid-Medical-Web-Assistant" target="_blank" rel="noopener noreferrer" aria-label="View LangGraph OmniAgent on GitHub" class="icon-link">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            </a>
-          </div>
-        </div>
-        <h3 id="proj1-title" class="project-title">LangGraph OmniAgent</h3>
-        <p class="project-subtitle mono">Hybrid Medical & Web Assistant</p>
-        <p class="project-desc">A production-ready AI agent using LangGraph and ReAct architecture, intelligently routing user queries between medical knowledge systems and live web search. Features persistent memory and multi-agent collaboration.</p>
-        <ul class="project-features" aria-label="Key features">
-          <li>Agentic AI Workflow (ReAct)</li>
-          <li>Tool Calling & Memory Management</li>
-          <li>Multi-Agent Architecture</li>
-          <li>Real-time Information Retrieval</li>
-        </ul>
-        <div class="project-stack">
-          <span class="tag">Python</span><span class="tag">LangGraph</span><span class="tag">LangChain</span><span class="tag">OpenAI</span><span class="tag">FastAPI</span>
-        </div>
-      </article>
+        <li>
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
 
-      <!-- Project 2 -->
-      <article class="project-card glass reveal" data-category="ai" aria-labelledby="proj2-title">
-        <div class="project-top">
-          <div class="project-icon">📄</div>
-          <div class="project-links">
-            <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub" class="icon-link">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            </a>
-          </div>
-        </div>
-        <h3 id="proj2-title" class="project-title">Embedded Systems QA Assistant</h3>
-        <p class="project-subtitle mono">RAG-Based Academic Assistant</p>
-        <p class="project-desc">Free, open-source QA system using RAG for multi-format ingestion — PDFs, Word, Excel, CSV, and YouTube transcripts. Persistent memory enables context-aware multi-turn conversations.</p>
-        <ul class="project-features" aria-label="Key features">
-          <li>Multi-format Document Ingestion</li>
-          <li>Semantic Vector Search</li>
-          <li>Persistent Conversational Memory</li>
-          <li>Context-Aware LLM Responses</li>
-        </ul>
-        <div class="project-stack">
-          <span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">ChromaDB</span><span class="tag">RAG</span><span class="tag">LLM</span>
-        </div>
-      </article>
+        <li>
+          <a href="Aswin_B_Resume.pdf" download class="btn btn-sm">
+            Resume
+          </a>
+        </li>
 
-      <!-- Project 3 -->
-      <article class="project-card glass reveal" data-category="ai" aria-labelledby="proj3-title">
-        <div class="project-top">
-          <div class="project-icon">🧑‍💼</div>
-          <div class="project-links">
-            <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub" class="icon-link">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            </a>
-          </div>
-        </div>
-        <h3 id="proj3-title" class="project-title">AI Resume Analyzer</h3>
-        <p class="project-subtitle mono">Job Preparation System</p>
-        <p class="project-desc">Multi-agent pipeline using CrewAI to automate job preparation — role-based agents for resume tailoring, JD analysis, and interview question generation with real-time job data via Serper API.</p>
-        <ul class="project-features" aria-label="Key features">
-          <li>Multi-Agent Orchestration (CrewAI)</li>
-          <li>Real-time Web Scraping</li>
-          <li>JD Analysis & Resume Tailoring</li>
-          <li>Interview Question Generation</li>
-        </ul>
-        <div class="project-stack">
-          <span class="tag">Python</span><span class="tag">CrewAI</span><span class="tag">Serper API</span><span class="tag">Web Scraping</span>
-        </div>
-      </article>
-
-      <!-- Project 4 -->
-      <article class="project-card glass reveal" data-category="fullstack" aria-labelledby="proj4-title">
-        <div class="project-top">
-          <div class="project-icon">📝</div>
-          <div class="project-links">
-            <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub" class="icon-link">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            </a>
-          </div>
-        </div>
-        <h3 id="proj4-title" class="project-title">Online Examination System</h3>
-        <p class="project-subtitle mono">Auto-Evaluation with NLP</p>
-        <p class="project-desc">Cloud-ready examination platform with NLP-based auto-evaluation using TF-IDF and Cosine Similarity. Supports concurrent exam sessions with automated scoring and instant result delivery at institutional scale.</p>
-        <ul class="project-features" aria-label="Key features">
-          <li>NLP-based Auto-Evaluation (TF-IDF)</li>
-          <li>Secure User Authentication</li>
-          <li>Real-time Result Generation</li>
-          <li>Concurrent Exam Sessions</li>
-        </ul>
-        <div class="project-stack">
-          <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">NLP</span><span class="tag">MySQL</span><span class="tag">JS</span>
-        </div>
-      </article>
-
-      <!-- Project 5 -->
-      <article class="project-card glass reveal" data-category="fullstack" aria-labelledby="proj5-title">
-        <div class="project-top">
-          <div class="project-icon">✅</div>
-          <div class="project-links">
-            <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub" class="icon-link">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            </a>
-          </div>
-        </div>
-        <h3 id="proj5-title" class="project-title">Online Task Tracker</h3>
-        <p class="project-subtitle mono">Full Stack Web Application</p>
-        <p class="project-desc">Web-based task management system with secure authentication, dynamic dashboard, and full CRUD operations — add, edit, delete, and track tasks by deadline and priority.</p>
-        <ul class="project-features" aria-label="Key features">
-          <li>Secure User Authentication</li>
-          <li>Deadline & Priority Tracking</li>
-          <li>Full CRUD Operations</li>
-          <li>Java HTTP Server + JDBC</li>
-        </ul>
-        <div class="project-stack">
-          <span class="tag">Java</span><span class="tag">JDBC</span><span class="tag">MySQL</span><span class="tag">HTML/CSS</span>
-        </div>
-      </article>
-
-      <!-- Add new project card below this comment -->
-
-    </div>
-    <div class="add-hint mono reveal">+ To add a new project, duplicate a &lt;article class="project-card"&gt; block above</div>
-  </div>
-</section>
-
-<!-- Certifications Section -->
-<section id="certifications" class="section section-alt" aria-labelledby="certs-heading">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag mono">04 / certifications</span>
-      <h2 id="certs-heading">Certifications</h2>
-    </div>
-    <div class="certs-grid">
-
-      <div class="cert-card glass reveal">
-        <div class="cert-badge ibm">IBM</div>
-        <h3>RAG and Agentic AI</h3>
-        <p class="cert-issuer">IBM · Coursera</p>
-        <p class="cert-desc">Retrieval-Augmented Generation, Agentic AI workflows, and production LLM applications.</p>
-        <div class="cert-tag">AI / ML</div>
-      </div>
-
-      <div class="cert-card glass reveal">
-        <div class="cert-badge amazon">AMZ</div>
-        <h3>Junior Software Developer</h3>
-        <p class="cert-issuer">Amazon · Coursera</p>
-        <p class="cert-desc">Software development fundamentals, cloud-native patterns, and Amazon's engineering practices.</p>
-        <div class="cert-tag">Development</div>
-      </div>
-
-      <div class="cert-card glass reveal">
-        <div class="cert-badge ibm">IBM</div>
-        <h3>Building AI Agents & Agentic Workflows</h3>
-        <p class="cert-issuer">IBM · Coursera</p>
-        <p class="cert-desc">Designing and deploying multi-agent systems with orchestration and tool integration.</p>
-        <div class="cert-tag">AI Agents</div>
-      </div>
-
-      <div class="cert-card glass reveal">
-        <div class="cert-badge google">G</div>
-        <h3>Google AI Essentials</h3>
-        <p class="cert-issuer">Google · Coursera</p>
-        <p class="cert-desc">Foundations of AI, responsible AI practices, and practical applications of AI tools.</p>
-        <div class="cert-tag">AI</div>
-      </div>
-
-      <div class="cert-card glass reveal">
-        <div class="cert-badge google">G</div>
-        <h3>Google Prompting Essentials</h3>
-        <p class="cert-issuer">Google · Coursera</p>
-        <p class="cert-desc">Advanced prompt engineering techniques, chain-of-thought prompting, and production LLM usage.</p>
-        <div class="cert-tag">Prompt Engineering</div>
-      </div>
-
-      <!-- Add new certification card below this comment -->
-
-    </div>
-    <div class="add-hint mono reveal">+ Duplicate a &lt;div class="cert-card"&gt; to add a new certification</div>
-  </div>
-</section>
-
-<!-- Education Section -->
-<section id="education" class="section" aria-labelledby="edu-heading">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag mono">05 / education</span>
-      <h2 id="edu-heading">Education</h2>
-    </div>
-    <div class="timeline">
-
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content glass">
-          <div class="edu-header">
-            <div>
-              <h3>B.E. Computer Science &amp; Engineering</h3>
-              <p class="edu-institution">VSB College of Engineering Technical Campus</p>
-              <p class="edu-location mono">Coimbatore, Tamil Nadu</p>
-            </div>
-            <div class="edu-meta">
-              <span class="edu-year">2022 – 2026</span>
-              <span class="edu-cgpa grad-text">7.9 / 10</span>
-            </div>
-          </div>
-          <div class="coursework">
-            <p class="coursework-label mono">Relevant Coursework:</p>
-            <div class="course-pills">
-              <span>Data Structures</span><span>Algorithms</span><span>Machine Learning</span>
-              <span>Database Systems</span><span>OOP</span><span>Operating Systems</span>
-              <span>Computer Networks</span><span>Software Engineering</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal">
-        <div class="timeline-dot small"></div>
-        <div class="timeline-content glass">
-          <div class="edu-header">
-            <div>
-              <h3>HSC (Higher Secondary Certificate)</h3>
-              <p class="edu-institution">Devi Matriculation Higher Secondary School</p>
-              <p class="edu-location mono">Mannargudi, Tamil Nadu</p>
-            </div>
-            <div class="edu-meta">
-              <span class="edu-year">2021 – 2022</span>
-              <span class="edu-cgpa">74.6%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal">
-        <div class="timeline-dot small"></div>
-        <div class="timeline-content glass">
-          <div class="edu-header">
-            <div>
-              <h3>SSLC (Secondary School Leaving Certificate)</h3>
-              <p class="edu-institution">Devi Matriculation Higher Secondary School</p>
-              <p class="edu-location mono">Mannargudi, Tamil Nadu</p>
-            </div>
-            <div class="edu-meta">
-              <span class="edu-year">2019 – 2020</span>
-              <span class="edu-cgpa">76.8%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Experience Section -->
-<section id="experience" class="section section-alt" aria-labelledby="exp-heading">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag mono">06 / experience</span>
-      <h2 id="exp-heading">Work Experience</h2>
-    </div>
-    <div class="exp-card glass reveal">
-      <div class="exp-header">
-        <div>
-          <h3>Java Full Stack Developer Intern</h3>
-          <p class="exp-company grad-text">ZIDIO Development</p>
-        </div>
-        <div class="exp-meta">
-          <span class="exp-date mono">Mar 2025 – Apr 2025</span>
-          <span class="exp-mode">Remote</span>
-        </div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Architected and delivered an Expense Manager Application using Java and Spring Boot with layered REST APIs and full CRUD operations against a MySQL backend.</li>
-        <li>Engineered real-time input validation and seamless frontend–backend integration (HTML/CSS), reducing user error rates and improving application responsiveness.</li>
-        <li>Applied RESTful design principles and MVC architecture to build maintainable, production-quality code within a 1-month delivery cycle.</li>
       </ul>
-      <div class="project-stack">
-        <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">MySQL</span><span class="tag">HTML/CSS</span>
-      </div>
     </div>
-    <!-- Add new experience below this comment -->
-  </div>
-</section>
+  </nav>
 
-<!-- Achievements Section -->
-<section id="achievements" class="section" aria-labelledby="ach-heading">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag mono">07 / achievements</span>
-      <h2 id="ach-heading">Achievements</h2>
-    </div>
-    <div class="ach-grid">
-      <div class="ach-item glass reveal">
-        <span class="ach-num mono grad-text">01</span>
-        <p>Built production-ready AI-powered applications using <strong>LangChain and LangGraph</strong> with multi-agent agentic workflows.</p>
-      </div>
-      <div class="ach-item glass reveal">
-        <span class="ach-num mono grad-text">02</span>
-        <p>Developed end-to-end <strong>Retrieval-Augmented Generation (RAG)</strong> systems supporting multi-format document ingestion and semantic search.</p>
-      </div>
-      <div class="ach-item glass reveal">
-        <span class="ach-num mono grad-text">03</span>
-        <p>Implemented <strong>NLP-based auto-evaluation</strong> engine using TF-IDF and Cosine Similarity, eliminating manual grading effort.</p>
-      </div>
-      <div class="ach-item glass reveal">
-        <span class="ach-num mono grad-text">04</span>
-        <p>Delivered a full-stack <strong>Expense Manager Application</strong> during internship within a 1-month cycle using Java, Spring Boot, and MySQL.</p>
-      </div>
-      <div class="ach-item glass reveal">
-        <span class="ach-num mono grad-text">05</span>
-        <p>Earned <strong>5 professional certifications</strong> from IBM, Amazon, and Google in AI, Agentic AI, and Software Development.</p>
-      </div>
-      <div class="ach-item glass reveal">
-        <span class="ach-num mono grad-text">06</span>
-        <p>Built multi-agent AI pipeline using <strong>CrewAI</strong> to fully automate job preparation — resume tailoring, JD analysis, and interview prep.</p>
-      </div>
-      <!-- Add new achievement below this comment -->
-    </div>
-  </div>
-</section>
+  <!-- ================= HERO ================= -->
 
-<!-- Resume Section -->
-<section id="resume" class="section section-alt" aria-labelledby="resume-heading">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag mono">08 / resume</span>
-      <h2 id="resume-heading">Resume</h2>
-    </div>
-    <div class="resume-card glass reveal">
-      <div class="resume-preview">
-        <div class="resume-mock">
-          <div class="rm-line wide"></div>
-          <div class="rm-line medium"></div>
-          <div class="rm-break"></div>
-          <div class="rm-line short"></div>
-          <div class="rm-line medium"></div>
-          <div class="rm-line wide"></div>
-          <div class="rm-line short"></div>
-          <div class="rm-break"></div>
-          <div class="rm-line medium"></div>
-          <div class="rm-line wide"></div>
-          <div class="rm-line medium"></div>
-        </div>
-      </div>
-      <div class="resume-info">
-        <h3>Aswin B</h3>
-        <p class="grad-text">AI Engineer · Full Stack Developer</p>
-        <p>Complete overview of skills, projects, certifications, and experience. Updated June 2025.</p>
-        <div class="resume-actions">
-          <a href="Aswin_B_Resume.pdf" download class="btn btn-primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-            Download PDF
-          </a>
-          <a href="Aswin_B_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            View Resume
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <section id="hero" class="hero">
 
-<!-- Contact Section -->
-<section id="contact" class="section" aria-labelledby="contact-heading">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag mono">09 / contact</span>
-      <h2 id="contact-heading">Get In Touch</h2>
-      <p class="section-sub">Open to AI Engineer, Software Developer, and Full Stack roles. Let's build something intelligent together.</p>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <div class="contact-item glass">
-          <div class="ci-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div>
-            <p class="ci-label mono">Email</p>
-            <a href="mailto:aswinbose05@gmail.com" class="ci-value">aswinbose05@gmail.com</a>
-          </div>
-        </div>
-        <div class="contact-item glass">
-          <div class="ci-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          </div>
-          <div>
-            <p class="ci-label mono">LinkedIn</p>
-            <a href="https://linkedin.com/in/aswinbose05" target="_blank" rel="noopener noreferrer" class="ci-value">linkedin.com/in/aswinbose05</a>
-          </div>
-        </div>
-        <div class="contact-item glass">
-          <div class="ci-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-          </div>
-          <div>
-            <p class="ci-label mono">GitHub</p>
-            <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="ci-value">github.com/Aswinbose05</a>
-          </div>
-        </div>
-        <div class="contact-item glass">
-          <div class="ci-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div>
-            <p class="ci-label mono">Location</p>
-            <span class="ci-value">Coimbatore, India</span>
-          </div>
-        </div>
-      </div>
-      <div class="contact-form-wrap reveal">
-        <form class="contact-form glass" id="contactForm" novalidate>
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary w-full">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            Send Message
-          </button>
-          <div class="form-status" id="formStatus" aria-live="polite"></div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="hero-content">
 
-<!-- Footer -->
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="#hero" class="nav-logo">
-          <span class="mono">&lt;</span>AB<span class="mono">/&gt;</span>
+      <p class="hero-eyebrow mono">
+        <span class="dot"></span>
+        Available for opportunities
+      </p>
+
+      <h1 class="hero-name">
+        Aswin B
+      </h1>
+
+      <div class="hero-roles">
+        <span id="typed-role" class="mono grad-text"></span>
+      </div>
+
+      <p class="hero-tagline">
+        Building intelligent AI systems, agentic workflows,
+        RAG applications and scalable software solutions.
+      </p>
+
+      <div class="hero-actions">
+
+        <a
+          href="Aswin_B_Resume.pdf"
+          download
+          class="btn btn-primary"
+        >
+          ↓ Download Resume
         </a>
-        <p>Building intelligent AI systems and scalable software solutions. Open to exciting opportunities.</p>
-        <div class="footer-socials">
-          <a href="https://linkedin.com/in/aswinbose05" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-          </a>
-          <a href="mailto:aswinbose05@gmail.com" aria-label="Email" class="social-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </a>
-        </div>
-      </div>
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <ul role="list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h4>Expertise</h4>
-        <ul role="list">
-          <li><a href="#projects" data-filter-link="ai">Generative AI</a></li>
-          <li><a href="#projects" data-filter-link="ai">Agentic AI</a></li>
-          <li><a href="#projects" data-filter-link="ai">LangGraph / RAG</a></li>
-          <li><a href="#projects" data-filter-link="fullstack">Full Stack Dev</a></li>
-          <li><a href="#experience">Java / Spring Boot</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="mono">© 2025 Aswin B. Built with code and curiosity.</p>
-      <p class="mono"><span class="dot"></span> Open to opportunities</p>
-    </div>
-  </div>
-</footer>
 
-<script src="script.js"></script>
+        <a href="#projects" class="btn btn-outline">
+          View Projects
+        </a>
+
+      </div>
+
+      <div class="hero-socials">
+
+        <a
+          href="https://linkedin.com/in/aswinbose05"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="LinkedIn"
+        >
+          in
+        </a>
+
+        <a
+          href="https://github.com/Aswinbose05"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="GitHub"
+        >
+          GH
+        </a>
+
+        <a
+          href="mailto:aswinbose05@gmail.com"
+          class="social-link"
+          aria-label="Email"
+        >
+          @
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-visual">
+
+      <div class="avatar-ring">
+
+        <div class="avatar-placeholder">
+          AB
+        </div>
+
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+
+      </div>
+
+      <div class="float-badge b1 mono">
+        Python
+      </div>
+
+      <div class="float-badge b2 mono">
+        LangGraph
+      </div>
+
+      <div class="float-badge b3 mono">
+        RAG
+      </div>
+
+      <div class="float-badge b4 mono">
+        CrewAI
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= ABOUT ================= -->
+
+  <section id="about" class="section">
+
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag mono">01 / about</span>
+        <h2>About Me</h2>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-text reveal">
+
+          <p class="lead">
+            Computer Science and Engineering graduate focused on
+            <strong>AI Engineering</strong>,
+            <strong>Generative AI</strong>,
+            <strong>Agentic AI</strong>,
+            and Full Stack Development.
+          </p>
+
+          <p>
+            I build practical AI-powered applications using
+            Python, LangChain, LangGraph, CrewAI, RAG,
+            LLMs, vector databases and modern APIs.
+          </p>
+
+          <p>
+            I also have hands-on experience with Java,
+            Spring Boot, REST APIs, React, MySQL and
+            cloud technologies.
+          </p>
+
+          <div class="about-stats">
+
+            <div class="stat">
+              <span class="stat-num grad-text">3+</span>
+              <span class="stat-label">AI Projects</span>
+            </div>
+
+            <div class="stat">
+              <span class="stat-num grad-text">6</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+
+            <div class="stat">
+              <span class="stat-num grad-text">8.0</span>
+              <span class="stat-label">CGPA / 10</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="about-cards reveal">
+
+          <div class="info-card glass">
+            <div class="info-icon">🧠</div>
+            <h3>AI Engineering</h3>
+            <p>
+              Generative AI, LLMs, RAG, Agentic AI,
+              LangChain, LangGraph, CrewAI and Ragas.
+            </p>
+          </div>
+
+          <div class="info-card glass">
+            <div class="info-icon">⚙️</div>
+            <h3>Backend Engineering</h3>
+            <p>
+              Python, Java, Spring Boot, FastAPI,
+              REST APIs, MySQL and API integration.
+            </p>
+          </div>
+
+          <div class="info-card glass">
+            <div class="info-icon">🌐</div>
+            <h3>Full Stack</h3>
+            <p>
+              HTML, CSS, JavaScript, React,
+              responsive interfaces and modern web applications.
+            </p>
+          </div>
+
+          <div class="info-card glass">
+            <div class="info-icon">☁️</div>
+            <h3>Cloud & DevOps</h3>
+            <p>
+              AWS, Docker, Jenkins, Git,
+              GitHub, Maven and CI/CD fundamentals.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= SKILLS ================= -->
+
+  <section id="skills" class="section section-alt">
+
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag mono">02 / skills</span>
+        <h2>Technical Skills</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-group glass reveal">
+
+          <div class="skill-group-header">
+            <span class="skill-icon">💻</span>
+            <h3>Programming</h3>
+          </div>
+
+          <div class="skill-pills">
+            <span class="pill">Python</span>
+            <span class="pill">Java</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">SQL</span>
+          </div>
+
+          <div class="skill-bars">
+
+            <div class="skill-bar-item">
+              <span>Python</span>
+              <div class="bar">
+                <div class="bar-fill" data-pct="90"></div>
+              </div>
+              <span>90%</span>
+            </div>
+
+            <div class="skill-bar-item">
+              <span>Java</span>
+              <div class="bar">
+                <div class="bar-fill" data-pct="85"></div>
+              </div>
+              <span>85%</span>
+            </div>
+
+            <div class="skill-bar-item">
+              <span>JavaScript</span>
+              <div class="bar">
+                <div class="bar-fill" data-pct="78"></div>
+              </div>
+              <span>78%</span>
+            </div>
+
+            <div class="skill-bar-item">
+              <span>SQL</span>
+              <div class="bar">
+                <div class="bar-fill" data-pct="82"></div>
+              </div>
+              <span>82%</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="skill-group glass reveal">
+
+          <div class="skill-group-header">
+            <span class="skill-icon">🤖</span>
+            <h3>AI / ML</h3>
+          </div>
+
+          <div class="skill-pills">
+
+            <span class="pill accent">Generative AI</span>
+            <span class="pill accent">LLMs</span>
+            <span class="pill accent">RAG</span>
+            <span class="pill accent">LangChain</span>
+            <span class="pill accent">LangGraph</span>
+            <span class="pill accent">CrewAI</span>
+            <span class="pill accent">AI Agents</span>
+            <span class="pill accent">Prompt Engineering</span>
+            <span class="pill accent">Ragas</span>
+
+          </div>
+
+          <div class="skill-bars">
+
+            <div class="skill-bar-item">
+              <span>RAG</span>
+              <div class="bar">
+                <div class="bar-fill accent-fill" data-pct="88"></div>
+              </div>
+              <span>88%</span>
+            </div>
+
+            <div class="skill-bar-item">
+              <span>LangGraph</span>
+              <div class="bar">
+                <div class="bar-fill accent-fill" data-pct="85"></div>
+              </div>
+              <span>85%</span>
+            </div>
+
+            <div class="skill-bar-item">
+              <span>Prompt Engineering</span>
+              <div class="bar">
+                <div class="bar-fill accent-fill" data-pct="84"></div>
+              </div>
+              <span>84%</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="skill-group glass reveal">
+
+          <div class="skill-group-header">
+            <span class="skill-icon">🌐</span>
+            <h3>Web Development</h3>
+          </div>
+
+          <div class="skill-pills">
+
+            <span class="pill cyan">HTML</span>
+            <span class="pill cyan">CSS</span>
+            <span class="pill cyan">JavaScript</span>
+            <span class="pill cyan">React</span>
+            <span class="pill cyan">Spring Boot</span>
+            <span class="pill cyan">FastAPI</span>
+            <span class="pill cyan">REST APIs</span>
+
+          </div>
+
+        </div>
+
+
+        <div class="skill-group glass reveal">
+
+          <div class="skill-group-header">
+            <span class="skill-icon">☁️</span>
+            <h3>Cloud, DB & Tools</h3>
+          </div>
+
+          <div class="skill-pills">
+
+            <span class="pill">MySQL</span>
+            <span class="pill">FAISS</span>
+            <span class="pill">Qdrant</span>
+            <span class="pill">Chroma</span>
+            <span class="pill">AWS</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Git</span>
+            <span class="pill">GitHub</span>
+            <span class="pill">Jenkins</span>
+            <span class="pill">Maven</span>
+            <span class="pill">Postman</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= PROJECTS ================= -->
+
+  <section id="projects" class="section">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="section-tag mono">03 / projects</span>
+
+        <h2>Featured Projects</h2>
+
+        <p class="section-sub">
+          AI, RAG, Agentic AI and full-stack applications
+          built with modern technologies.
+        </p>
+
+      </div>
+
+
+      <div class="filter-bar">
+
+        <button class="filter-btn active" data-filter="all">
+          All
+        </button>
+
+        <button class="filter-btn" data-filter="ai">
+          AI / ML
+        </button>
+
+        <button class="filter-btn" data-filter="fullstack">
+          Full Stack
+        </button>
+
+      </div>
+
+
+      <div class="projects-grid">
+
+        <!-- PROJECT - LANGGRAPH RAG WEB AGENT -->
+
+        <article
+          class="project-card glass reveal"
+          data-category="ai"
+        >
+
+          <div class="project-top">
+
+            <div class="project-icon">
+              🧠
+            </div>
+
+            <div class="project-links">
+
+              <!-- LIVE PROJECT -->
+              <a
+                href="https://langgraph-rag-web-agent-05.streamlit.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link live-link"
+              >
+                Live Demo ↗
+              </a>
+
+              <!-- GITHUB -->
+              <a
+                href="https://github.com/Aswinbose05/LangGraph-RAG-Web-Agent"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <h3>LangGraph RAG Web Agent</h3>
+
+
+          <p class="project-subtitle mono">
+            Agentic AI + RAG Web Assistant
+          </p>
+
+
+          <p class="project-desc">
+            An Agentic AI web application built with Python,
+            LangGraph and LangChain, using ReAct-based reasoning
+            for intelligent query processing, dynamic tool selection
+            and multi-step task execution.
+          </p>
+
+
+          <ul class="project-features">
+
+            <li>
+              LangGraph ReAct agent workflow
+            </li>
+
+            <li>
+              Retrieval-Augmented Generation with Qdrant
+            </li>
+
+            <li>
+              Hugging Face embeddings for semantic retrieval
+            </li>
+
+            <li>
+              Real-time web search using Serper API
+            </li>
+
+            <li>
+              Custom tools and tool calling
+            </li>
+
+            <li>
+              Persistent conversational memory using SQLite
+            </li>
+
+          </ul>
+
+
+          <div class="project-stack">
+
+            <span class="tag">Python</span>
+
+            <span class="tag">LangGraph</span>
+
+            <span class="tag">LangChain</span>
+
+            <span class="tag">Agentic AI</span>
+
+            <span class="tag">RAG</span>
+
+            <span class="tag">Qdrant</span>
+
+            <span class="tag">Hugging Face</span>
+
+            <span class="tag">Serper API</span>
+
+            <span class="tag">SQLite</span>
+
+            <span class="tag">Streamlit</span>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 1 -->
+
+        <article
+          class="project-card glass reveal"
+          data-category="fullstack"
+        >
+
+          <div class="project-top">
+
+            <div class="project-icon">
+              ✨
+            </div>
+
+            <div class="project-links">
+
+              <a
+                href="https://nexora-ai-chi-seven.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link live-link"
+              >
+                Live Demo ↗
+              </a>
+
+              <a
+                href="https://github.com/Aswinbose05"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </div>
+
+          <h3>Nexora AI</h3>
+
+          <p class="project-subtitle mono">
+            AI-Powered Chat Application
+          </p>
+
+          <p class="project-desc">
+            A modern AI chat application built with React.js
+            and Google Gemini API providing real-time AI responses,
+            persistent chat history and a responsive production-style UI.
+          </p>
+
+          <ul class="project-features">
+
+            <li>Google Gemini API integration</li>
+            <li>Persistent chat history</li>
+            <li>Markdown & code rendering</li>
+            <li>Dark / Light theme</li>
+            <li>AbortController error handling</li>
+
+          </ul>
+
+          <div class="project-stack">
+
+            <span class="tag">React</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Gemini API</span>
+            <span class="tag">Vite</span>
+            <span class="tag">CSS3</span>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 2 -->
+
+        <article
+          class="project-card glass reveal"
+          data-category="ai"
+        >
+
+          <div class="project-top">
+
+            <div class="project-icon">
+              📚
+            </div>
+
+            <div class="project-links">
+
+              <a
+                href="https://academic-quea-assistant.streamlit.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link live-link"
+              >
+                Live Demo ↗
+              </a>
+
+              <a
+                href="https://github.com/Aswinbose05"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </div>
+
+          <h3>Embedded Systems QA Assistant</h3>
+
+          <p class="project-subtitle mono">
+            RAG-Based Academic QA System
+          </p>
+
+          <p class="project-desc">
+            A Retrieval-Augmented Generation system designed
+            for academic question answering with multi-format
+            document ingestion and semantic retrieval.
+          </p>
+
+          <ul class="project-features">
+
+            <li>PDF, Word, Excel and CSV ingestion</li>
+            <li>YouTube transcript support</li>
+            <li>Document chunking & embeddings</li>
+            <li>Vector database retrieval</li>
+            <li>Conversational memory</li>
+            <li>RAG evaluation using Ragas</li>
+
+          </ul>
+
+          <div class="project-stack">
+
+            <span class="tag">Python</span>
+            <span class="tag">RAG</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">Vector DB</span>
+            <span class="tag">Ragas</span>
+            <span class="tag">Streamlit</span>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 3 -->
+
+        <article
+          class="project-card glass reveal"
+          data-category="ai"
+        >
+
+          <div class="project-top">
+
+            <div class="project-icon">
+              🧠
+            </div>
+
+            <div class="project-links">
+
+              <a
+                href="https://langgraph-rag-web-agent-05.streamlit.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link live-link"
+              >
+                Live Demo ↗
+              </a>
+
+              <a
+                href="https://github.com/Aswinbose05"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </div>
+
+          <h3>AI Resume Analyzer & Job Preparation System</h3>
+
+          <p class="project-subtitle mono">
+            Multi-Agent AI Job Preparation Platform
+          </p>
+
+          <p class="project-desc">
+            A multi-agent AI system built with CrewAI to automate
+            resume tailoring, job description analysis and
+            interview preparation for target roles.
+          </p>
+
+          <ul class="project-features">
+
+            <li>Multi-agent orchestration</li>
+            <li>Resume tailoring</li>
+            <li>Job description analysis</li>
+            <li>Interview question generation</li>
+            <li>Real-time web data retrieval</li>
+            <li>Serper API integration</li>
+
+          </ul>
+
+          <div class="project-stack">
+
+            <span class="tag">Python</span>
+            <span class="tag">CrewAI</span>
+            <span class="tag">Serper API</span>
+            <span class="tag">Web Scraping</span>
+            <span class="tag">LLMs</span>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 4 -->
+
+        <article
+          class="project-card glass reveal"
+          data-category="fullstack"
+        >
+
+          <div class="project-top">
+
+            <div class="project-icon">
+              📝
+            </div>
+
+            <div class="project-links">
+
+              <a
+                href="https://github.com/Aswinbose05"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </div>
+
+          <h3>Online Examination System</h3>
+
+          <p class="project-subtitle mono">
+            Auto-Evaluation with NLP
+          </p>
+
+          <p class="project-desc">
+            A cloud-ready online examination platform with
+            secure authentication, exam management and
+            NLP-based automated evaluation.
+          </p>
+
+          <ul class="project-features">
+
+            <li>Secure authentication</li>
+            <li>Exam lifecycle management</li>
+            <li>TF-IDF evaluation</li>
+            <li>Cosine similarity</li>
+            <li>Instant result generation</li>
+
+          </ul>
+
+          <div class="project-stack">
+
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">NLP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">JavaScript</span>
+
+          </div>
+
+        </article>
+
+        
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CERTIFICATIONS ================= -->
+
+  <section id="certifications" class="section section-alt">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="section-tag mono">
+          04 / certifications
+        </span>
+
+        <h2>Certifications</h2>
+
+        <p class="section-sub">
+          Professional certifications covering Generative AI,
+          Agentic AI, Prompt Engineering and Software Development.
+        </p>
+
+      </div>
+
+
+      <div class="certs-grid">
+
+
+        <!-- IBM GENERATIVE AI -->
+
+        <div class="cert-card glass reveal">
+
+          <div class="cert-badge ibm">
+            IBM
+          </div>
+
+          <h3>
+            IBM Generative AI Engineering
+          </h3>
+
+          <p class="cert-issuer">
+            IBM · Coursera
+          </p>
+
+          <p class="cert-desc">
+            Generative AI, LLMs, Transformers, RAG,
+            Hugging Face and AI application development.
+          </p>
+
+          <a
+            href="https://coursera.org/verify/professional-cert/HPTUIYT05NFH"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cert-link"
+          >
+            Verify Certificate ↗
+          </a>
+
+        </div>
+
+
+        <!-- IBM RAG -->
+
+        <div class="cert-card glass reveal">
+
+          <div class="cert-badge ibm">
+            IBM
+          </div>
+
+          <h3>
+            IBM RAG and Agentic AI
+          </h3>
+
+          <p class="cert-issuer">
+            IBM · Coursera
+          </p>
+
+          <p class="cert-desc">
+            RAG, vector databases, LangGraph, CrewAI,
+            agentic workflows, tool calling and MCP.
+          </p>
+
+          <a
+            href="https://coursera.org/verify/professional-cert/2RUHFCUR63X0"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cert-link"
+          >
+            Verify Certificate ↗
+          </a>
+
+        </div>
+
+
+        <!-- AMAZON -->
+
+        <div class="cert-card glass reveal">
+
+          <div class="cert-badge amazon">
+            AMZ
+          </div>
+
+          <h3>
+            Amazon Junior Software Developer
+          </h3>
+
+          <p class="cert-issuer">
+            Amazon · Coursera
+          </p>
+
+          <p class="cert-desc">
+            Software development fundamentals,
+            programming, databases and application development.
+          </p>
+
+          <a
+            href="https://www.coursera.org/account/accomplishments/professional-cert/QBRXEFMA6DGX"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cert-link"
+          >
+            View Credential ↗
+          </a>
+
+        </div>
+
+
+        <!-- IBM AGENTS -->
+
+        <div class="cert-card glass reveal">
+
+          <div class="cert-badge ibm">
+            IBM
+          </div>
+
+          <h3>
+            Building AI Agents & Agentic Workflows
+          </h3>
+
+          <p class="cert-issuer">
+            IBM · Coursera
+          </p>
+
+          <p class="cert-desc">
+            AI agents, tool calling, orchestration,
+            agentic workflows and autonomous task execution.
+          </p>
+
+          <a
+            href="https://www.coursera.org/account/accomplishments/specialization/SQT10P5XYJBF"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cert-link"
+          >
+            View Credential ↗
+          </a>
+
+        </div>
+
+
+        <!-- GOOGLE AI -->
+
+        <div class="cert-card glass reveal">
+
+          <div class="cert-badge google">
+            G
+          </div>
+
+          <h3>
+            Google AI Essentials
+          </h3>
+
+          <p class="cert-issuer">
+            Google · Coursera
+          </p>
+
+          <p class="cert-desc">
+            AI fundamentals, generative AI tools,
+            productivity and responsible AI practices.
+          </p>
+
+          <a
+            href="https://www.coursera.org/account/accomplishments/professional-cert/JTN58LNMTOPV"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cert-link"
+          >
+            View Credential ↗
+          </a>
+
+        </div>
+
+
+        <!-- GOOGLE PROMPTING -->
+
+        <div class="cert-card glass reveal">
+
+          <div class="cert-badge google">
+            G
+          </div>
+
+          <h3>
+            Google Prompting Essentials
+          </h3>
+
+          <p class="cert-issuer">
+            Google · Coursera
+          </p>
+
+          <p class="cert-desc">
+            Prompt engineering, prompt patterns,
+            AI-assisted workflows and responsible AI usage.
+          </p>
+
+          <a
+            href="https://www.coursera.org/account/accomplishments/specialization/OE0CKSSOT4VM"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cert-link"
+          >
+            Verify Certificate ↗
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= EDUCATION ================= -->
+
+  <section id="education" class="section">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="section-tag mono">
+          05 / education
+        </span>
+
+        <h2>Education</h2>
+
+      </div>
+
+
+      <div class="timeline">
+
+
+        <div class="timeline-item reveal">
+
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-content glass">
+
+            <div class="edu-header">
+
+              <div>
+
+                <h3>
+                  B.E. Computer Science and Engineering
+                </h3>
+
+                <p class="edu-institution">
+                  VSB College of Engineering Technical Campus
+                </p>
+
+                <p class="edu-location mono">
+                  Coimbatore, Tamil Nadu
+                </p>
+
+              </div>
+
+              <div class="edu-meta">
+
+                <span>
+                  2022 – 2026
+                </span>
+
+                <strong class="grad-text">
+                  8.0 / 10
+                </strong>
+
+              </div>
+
+            </div>
+
+            <div class="course-pills">
+
+              <span>Data Structures</span>
+              <span>Algorithms</span>
+              <span>Machine Learning</span>
+              <span>Database Systems</span>
+              <span>OOP</span>
+              <span>Operating Systems</span>
+              <span>Computer Networks</span>
+              <span>Software Engineering</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+          <div class="timeline-dot small"></div>
+
+          <div class="timeline-content glass">
+
+            <div class="edu-header">
+
+              <div>
+
+                <h3>
+                  HSC
+                </h3>
+
+                <p class="edu-institution">
+                  Devi Matriculation Higher Secondary School
+                </p>
+
+                <p class="edu-location mono">
+                  Mannargudi, Tamil Nadu
+                </p>
+
+              </div>
+
+              <div class="edu-meta">
+                <span>2021 – 2022</span>
+                <strong>74.6%</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+          <div class="timeline-dot small"></div>
+
+          <div class="timeline-content glass">
+
+            <div class="edu-header">
+
+              <div>
+
+                <h3>
+                  SSLC
+                </h3>
+
+                <p class="edu-institution">
+                  Devi Matriculation Higher Secondary School
+                </p>
+
+                <p class="edu-location mono">
+                  Mannargudi, Tamil Nadu
+                </p>
+
+              </div>
+
+              <div class="edu-meta">
+                <span>2019 – 2020</span>
+                <strong>76.8%</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= EXPERIENCE ================= -->
+
+  <section id="experience" class="section section-alt">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="section-tag mono">
+          06 / experience
+        </span>
+
+        <h2>Work Experience</h2>
+
+      </div>
+
+
+      <div class="exp-card glass reveal">
+
+        <div class="exp-header">
+
+          <div>
+
+            <h3>
+              Java Full Stack Developer Intern
+            </h3>
+
+            <p class="exp-company grad-text">
+              ZIDIO Development
+            </p>
+
+          </div>
+
+          <div class="exp-meta">
+
+            <span class="mono">
+              Mar 2025 – Apr 2025
+            </span>
+
+            <span>
+              Remote
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <ul class="exp-bullets">
+
+          <li>
+            Architected and delivered an Expense Manager
+            Application using Java and Spring Boot with
+            layered REST APIs and full CRUD operations.
+          </li>
+
+          <li>
+            Implemented MySQL backend integration,
+            real-time input validation and frontend-backend
+            integration using HTML and CSS.
+          </li>
+
+          <li>
+            Applied RESTful design principles and MVC
+            architecture to build maintainable software.
+          </li>
+
+        </ul>
+
+
+        <div class="project-stack">
+
+          <span class="tag">Java</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">HTML/CSS</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= ACHIEVEMENTS ================= -->
+
+  <section id="achievements" class="section">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="section-tag mono">
+          07 / achievements
+        </span>
+
+        <h2>Highlights</h2>
+
+      </div>
+
+
+      <div class="ach-grid">
+
+        <div class="ach-item glass reveal">
+          <span>01</span>
+          <p>
+            Built AI applications using LangChain,
+            LangGraph and multi-agent workflows.
+          </p>
+        </div>
+
+        <div class="ach-item glass reveal">
+          <span>02</span>
+          <p>
+            Developed RAG systems supporting
+            multi-format document ingestion and retrieval.
+          </p>
+        </div>
+
+        <div class="ach-item glass reveal">
+          <span>03</span>
+          <p>
+            Implemented RAG evaluation using
+            the Ragas framework.
+          </p>
+        </div>
+
+        <div class="ach-item glass reveal">
+          <span>04</span>
+          <p>
+            Built an NLP auto-evaluation engine
+            using TF-IDF and Cosine Similarity.
+          </p>
+        </div>
+
+        <div class="ach-item glass reveal">
+          <span>05</span>
+          <p>
+            Completed six professional certifications
+            from IBM, Amazon and Google.
+          </p>
+        </div>
+
+        <div class="ach-item glass reveal">
+          <span>06</span>
+          <p>
+            Developed a CrewAI multi-agent pipeline
+            for resume analysis and job preparation.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= RESUME ================= -->
+
+  <section id="resume" class="section section-alt">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="section-tag mono">
+          08 / resume
+        </span>
+
+        <h2>Resume</h2>
+
+      </div>
+
+
+      <div class="resume-card glass reveal">
+
+        <div class="resume-preview">
+
+          <div class="resume-mock">
+
+            <div class="rm-title"></div>
+            <div class="rm-line wide"></div>
+            <div class="rm-line medium"></div>
+
+            <div class="rm-break"></div>
+
+            <div class="rm-line short"></div>
+            <div class="rm-line wide"></div>
+            <div class="rm-line medium"></div>
+
+            <div class="rm-break"></div>
+
+            <div class="rm-line wide"></div>
+            <div class="rm-line medium"></div>
+
+          </div>
+
+        </div>
+
+
+        <div class="resume-info">
+
+          <h3>
+            Aswin B
+          </h3>
+
+          <p class="grad-text">
+            AI Engineer · Software Developer
+          </p>
+
+          <p>
+            AI, software development, full-stack and
+            Generative AI experience.
+          </p>
+
+          <div class="resume-actions">
+
+            <a
+              href="Aswin_B_Resume.pdf"
+              download
+              class="btn btn-primary"
+            >
+              ↓ Download PDF
+            </a>
+
+            <a
+              href="Aswin_B_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline"
+            >
+              View Resume
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CONTACT ================= -->
+
+  <section id="contact" class="section">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="section-tag mono">
+          09 / contact
+        </span>
+
+        <h2>Let's Connect</h2>
+
+        <p class="section-sub">
+          Open to AI Engineer, Software Developer,
+          Backend and Full Stack opportunities.
+        </p>
+
+      </div>
+
+
+      <div class="contact-grid">
+
+        <div class="contact-info reveal">
+
+          <div class="contact-item glass">
+
+            <span class="ci-icon">@</span>
+
+            <div>
+
+              <span class="ci-label mono">
+                Email
+              </span>
+
+              <a
+                href="mailto:aswinbose05@gmail.com"
+                class="ci-value"
+              >
+                aswinbose05@gmail.com
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="contact-item glass">
+
+            <span class="ci-icon">
+              in
+            </span>
+
+            <div>
+
+              <span class="ci-label mono">
+                LinkedIn
+              </span>
+
+              <a
+                href="https://linkedin.com/in/aswinbose05"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ci-value"
+              >
+                linkedin.com/in/aswinbose05
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="contact-item glass">
+
+            <span class="ci-icon">
+              GH
+            </span>
+
+            <div>
+
+              <span class="ci-label mono">
+                GitHub
+              </span>
+
+              <a
+                href="https://github.com/Aswinbose05"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ci-value"
+              >
+                github.com/Aswinbose05
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="contact-item glass">
+
+            <span class="ci-icon">
+              📍
+            </span>
+
+            <div>
+
+              <span class="ci-label mono">
+                Location
+              </span>
+
+              <span class="ci-value">
+                Coimbatore, India
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-form-wrap reveal">
+
+          <form
+            class="contact-form glass"
+            id="contactForm"
+            novalidate
+          >
+
+            <div class="form-group">
+
+              <label for="name">
+                Name
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+              />
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="email">
+                Email
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+              />
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="message">
+                Message
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell me about the opportunity..."
+                required
+              ></textarea>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary w-full"
+            >
+              Send Message →
+            </button>
+
+            <div
+              id="formStatus"
+              class="form-status"
+              aria-live="polite"
+            ></div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <a href="#hero" class="nav-logo">
+            <span class="mono">&lt;</span>AB<span class="mono">/&gt;</span>
+          </a>
+
+          <p>
+            Building intelligent AI systems,
+            agentic workflows and scalable software.
+          </p>
+
+          <div class="footer-socials">
+
+            <a
+              href="https://linkedin.com/in/aswinbose05"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+            >
+              in
+            </a>
+
+            <a
+              href="https://github.com/Aswinbose05"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+            >
+              GH
+            </a>
+
+            <a
+              href="mailto:aswinbose05@gmail.com"
+              class="social-link"
+            >
+              @
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-links">
+
+          <h4>Quick Links</h4>
+
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+          <h4>Focus</h4>
+
+          <a href="#projects">Generative AI</a>
+          <a href="#projects">Agentic AI</a>
+          <a href="#projects">RAG</a>
+          <a href="#projects">LangGraph</a>
+          <a href="#projects">Full Stack</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p class="mono">
+          © 2026 Aswin B
+        </p>
+
+        <p class="mono">
+          <span class="dot"></span>
+          Open to opportunities
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
 </body>
+
 </html>
