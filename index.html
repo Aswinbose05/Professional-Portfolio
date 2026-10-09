@@ -24,23 +24,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
     rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- Cache-busting stylesheet -->
+  <link rel="stylesheet" href="style.css?v=10" />
 </head>
 
 <body>
 
-  <!-- ================= SCROLL PROGRESS ================= -->
+  <!-- Top Scroll Reading Bar -->
   <div id="scrollProgress" class="scroll-progress"></div>
 
-  <!-- ================= AMBIENT GLOW BACKDROPS ================= -->
-  <div class="ambient-glow glow-top" aria-hidden="true"></div>
-  <div class="ambient-glow glow-mid" aria-hidden="true"></div>
-  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
-
-  <!-- ================= LOADER ================= -->
+  <!-- Page Loader -->
   <div id="loader">
     <div class="loader-inner">
       <div class="loader-ring"></div>
@@ -50,10 +46,10 @@
     </div>
   </div>
 
-  <!-- ================= PARTICLES ================= -->
+  <!-- Background Particle Network -->
   <canvas id="particles"></canvas>
 
-  <!-- ================= NAVBAR ================= -->
+  <!-- Navigation -->
   <nav id="navbar">
     <div class="nav-inner">
 
@@ -68,46 +64,20 @@
       </button>
 
       <ul class="nav-links" id="navLinks">
-
-        <li>
-          <a href="#about" class="nav-link">About</a>
-        </li>
-
-        <li>
-          <a href="#skills" class="nav-link">Skills</a>
-        </li>
-
-        <li>
-          <a href="#projects" class="nav-link">Projects</a>
-        </li>
-
-        <li>
-          <a href="#certifications" class="nav-link">Certifications</a>
-        </li>
-
-        <li>
-          <a href="#education" class="nav-link">Education</a>
-        </li>
-
-        <li>
-          <a href="#experience" class="nav-link">Experience</a>
-        </li>
-
-        <li>
-          <a href="#contact" class="nav-link">Contact</a>
-        </li>
-
-        <li>
-          <a href="Aswin_B_Resume.pdf" download class="btn btn-sm">
-            Resume
-          </a>
-        </li>
-
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="Aswin_B_Resume.pdf" download class="btn btn-sm">Resume</a></li>
       </ul>
+
     </div>
   </nav>
 
-  <!-- ================= HERO ================= -->
+  <!-- Hero Section -->
   <section id="hero" class="hero">
 
     <div class="hero-content">
@@ -124,19 +94,18 @@
         Aswin B
       </h1>
 
-      <div class="hero-roles">
-        <span id="typed-role" class="mono grad-text"></span>
+      <div class="hero-roles mono">
+        <span id="typed-role"></span>
       </div>
 
       <p class="hero-tagline">
         Building intelligent AI systems, agentic workflows,
-        RAG applications and scalable software solutions.
+        RAG applications, and scalable backend solutions.
       </p>
 
       <div class="hero-actions">
-
         <a href="Aswin_B_Resume.pdf" download class="btn btn-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
           Download Resume
         </a>
 
@@ -144,173 +113,130 @@
           View Projects
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
-
       </div>
 
       <div class="hero-socials">
-
-        <a href="https://linkedin.com/in/aswinbose05" target="_blank" rel="noopener noreferrer" class="social-link"
-          aria-label="LinkedIn">
+        <a href="https://linkedin.com/in/aswinbose05" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.46 1.46 0 1 0 0-2.92 1.46 1.46 0 0 0 0 2.92M7.86 18.5v-8.37H5.07v8.37h2.79Z"/></svg>
         </a>
 
-        <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="social-link"
-          aria-label="GitHub">
+        <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
         </a>
 
         <a href="mailto:aswinbose05@gmail.com" class="social-link" aria-label="Email">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         </a>
-
       </div>
 
     </div>
 
+    <!-- Hero Focal Centerpiece: Live Agent Runtime Console -->
     <div class="hero-visual">
-
-      <div class="avatar-ring">
-
-        <div class="avatar-placeholder">
-          <span>AB</span>
-          <div class="core-glow"></div>
+      <div class="agent-terminal" id="agentTerminal">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="t-dot red"></span>
+            <span class="t-dot yellow"></span>
+            <span class="t-dot green"></span>
+          </div>
+          <div class="terminal-title mono">agent_runtime.py — LangGraph ReAct</div>
+          <div class="terminal-status mono">
+            <span class="t-status-live"></span>ACTIVE
+          </div>
         </div>
-
-        <div class="ring r1"></div>
-        <div class="ring r2"></div>
-        <div class="ring r3"></div>
-
+        <div class="terminal-body mono">
+          <div class="terminal-line dim">$ python -m agent.runner --workflow rag_web_agent</div>
+          <div class="terminal-line"><span class="t-cyan">[SYSTEM]</span> Graph initialized: LangGraph ReAct workflow</div>
+          <div class="terminal-line"><span class="t-blue">[TOOLS]</span> Ingested: [QdrantDB, SerperAPI, DocParser]</div>
+          <div class="terminal-line"><span class="t-purple">[GUARDRAIL]</span> Bi-directional prompt injection check: <span class="t-green">PASS</span></div>
+          <div class="terminal-line"><span class="t-yellow">[QUERY]</span> "Analyze semantic drift across embedded documents"</div>
+          <div class="terminal-line"><span class="t-blue">[RETRIEVE]</span> Qdrant similarity search -&gt; 4 chunks retrieved</div>
+          <div class="terminal-line"><span class="t-purple">[EVAL]</span> Ragas score: Faithfulness: 0.94 | Relevance: 0.91</div>
+          <div class="terminal-line t-success"><span class="t-green">✔ Execution complete</span> in 380ms (Cost: $0.0018)</div>
+          <div class="terminal-prompt"><span class="t-cyan">&gt;</span> <span class="terminal-cursor">_</span></div>
+        </div>
       </div>
-
-      <div class="float-badge b1 mono">
-        <span>⚡</span> Python
-      </div>
-
-      <div class="float-badge b2 mono">
-        <span>🧠</span> LangGraph
-      </div>
-
-      <div class="float-badge b3 mono">
-        <span>🔍</span> RAG
-      </div>
-
-      <div class="float-badge b4 mono">
-        <span>🤖</span> CrewAI
-      </div>
-
     </div>
 
   </section>
 
-  <!-- ================= ABOUT ================= -->
+  <!-- About Section -->
   <section id="about" class="section">
-
     <div class="container">
 
       <div class="section-header">
-        <span class="section-tag mono">01 / about</span>
+        <span class="section-tag mono">Background</span>
         <h2>About Me</h2>
       </div>
 
       <div class="about-grid">
 
-        <div class="about-text reveal">
-
+        <div class="about-text">
           <p class="lead">
-            Computer Science and Engineering graduate focused on
-            <strong>AI Engineering</strong>,
-            <strong>Generative AI</strong>,
-            <strong>Agentic AI</strong>,
-            and Full Stack Development.
+            Computer Science and Engineering graduate specializing in <strong>AI Engineering</strong>, <strong>Generative AI</strong>, <strong>Agentic AI</strong>, and Full Stack Development.
           </p>
-
           <p>
-            I build practical AI-powered applications using
-            Python, LangChain, LangGraph, CrewAI, RAG,
-            LLMs, vector databases and modern APIs.
+            I architect practical AI applications leveraging Python, LangChain, LangGraph, CrewAI, RAG pipelines, LLM security guardrails, vector databases, and modern APIs.
           </p>
-
           <p>
-            I also have hands-on experience with Java,
-            Spring Boot, REST APIs, React, MySQL and
-            cloud technologies.
+            I also bring hands-on experience in production backend engineering with Java, Spring Boot, REST APIs, React, MySQL, and containerized deployment.
           </p>
 
           <div class="about-stats">
-
             <div class="stat">
-              <span class="stat-num grad-text">3+</span>
+              <span class="stat-num">3+</span>
               <span class="stat-label">AI Projects</span>
             </div>
-
             <div class="stat">
-              <span class="stat-num grad-text">6</span>
+              <span class="stat-num">6</span>
               <span class="stat-label">Certifications</span>
             </div>
-
             <div class="stat">
-              <span class="stat-num grad-text">8.0</span>
+              <span class="stat-num">8.0</span>
               <span class="stat-label">CGPA / 10</span>
             </div>
-
           </div>
-
         </div>
 
-        <div class="about-cards reveal">
-
+        <div class="about-cards">
           <div class="info-card glass">
             <div class="info-icon">🧠</div>
             <h3>AI Engineering</h3>
-            <p>
-              Generative AI, LLMs, RAG, Agentic AI,
-              LangChain, LangGraph, CrewAI and Ragas.
-            </p>
+            <p>Generative AI, LLMs, RAG, Agentic AI, LangChain, LangGraph, CrewAI, and Ragas evaluation.</p>
           </div>
 
           <div class="info-card glass">
             <div class="info-icon">⚙️</div>
             <h3>Backend Engineering</h3>
-            <p>
-              Python, Java, Spring Boot, FastAPI,
-              REST APIs, MySQL and API integration.
-            </p>
+            <p>Python, Java, Spring Boot, FastAPI, REST APIs, MySQL, and resilient API integration.</p>
           </div>
 
           <div class="info-card glass">
             <div class="info-icon">🌐</div>
             <h3>Full Stack</h3>
-            <p>
-              HTML, CSS, JavaScript, React,
-              responsive interfaces and modern web applications.
-            </p>
+            <p>HTML, CSS, JavaScript, React, responsive interfaces, and modern web applications.</p>
           </div>
 
           <div class="info-card glass">
             <div class="info-icon">☁️</div>
-            <h3>Cloud & DevOps</h3>
-            <p>
-              AWS, Docker, Jenkins, Git,
-              GitHub, Maven and CI/CD fundamentals.
-            </p>
+            <h3>Cloud &amp; DevOps</h3>
+            <p>AWS, Docker, Jenkins, Git, GitHub, Maven, and continuous integration fundamentals.</p>
           </div>
-
         </div>
 
       </div>
 
     </div>
-
   </section>
 
-  <!-- ================= SKILLS ================= -->
+  <!-- Technical Skills Section -->
   <section id="skills" class="section section-alt">
-
     <div class="container">
 
       <div class="section-header">
-        <span class="section-tag mono">02 / skills</span>
-        <h2>Technical Skills</h2>
+        <span class="section-tag mono">Competencies</span>
+        <h2>Technical Proficiency</h2>
         <p class="section-sub">
           Core competencies, specialized frameworks, AI security, and production tooling.
         </p>
@@ -318,13 +244,11 @@
 
       <div class="skills-grid">
 
-        <div class="skill-group glass reveal">
-
+        <div class="skill-group glass">
           <div class="skill-group-header">
             <span class="skill-icon">💻</span>
             <h3>Programming</h3>
           </div>
-
           <div class="skill-pills">
             <span class="pill">Python</span>
             <span class="pill">Java</span>
@@ -335,52 +259,35 @@
             <span class="pill">API Integration</span>
             <span class="pill">Agile/Scrum</span>
           </div>
-
           <div class="skill-bars">
-
             <div class="skill-bar-item">
               <span>Python</span>
-              <div class="bar">
-                <div class="bar-fill" data-pct="90"></div>
-              </div>
+              <div class="bar"><div class="bar-fill" data-pct="90"></div></div>
               <span>90%</span>
             </div>
-
             <div class="skill-bar-item">
               <span>Java</span>
-              <div class="bar">
-                <div class="bar-fill" data-pct="85"></div>
-              </div>
+              <div class="bar"><div class="bar-fill" data-pct="85"></div></div>
               <span>85%</span>
             </div>
-
             <div class="skill-bar-item">
               <span>JavaScript</span>
-              <div class="bar">
-                <div class="bar-fill" data-pct="78"></div>
-              </div>
+              <div class="bar"><div class="bar-fill" data-pct="78"></div></div>
               <span>78%</span>
             </div>
-
             <div class="skill-bar-item">
               <span>SQL</span>
-              <div class="bar">
-                <div class="bar-fill" data-pct="82"></div>
-              </div>
+              <div class="bar"><div class="bar-fill" data-pct="82"></div></div>
               <span>82%</span>
             </div>
-
           </div>
-
         </div>
 
-        <div class="skill-group glass reveal">
-
+        <div class="skill-group glass">
           <div class="skill-group-header">
             <span class="skill-icon">🤖</span>
-            <h3>AI / ML & Frameworks</h3>
+            <h3>AI / ML &amp; Frameworks</h3>
           </div>
-
           <div class="skill-pills">
             <span class="pill accent">Machine Learning</span>
             <span class="pill accent">Generative AI</span>
@@ -395,44 +302,30 @@
             <span class="pill accent">RAG Evaluation</span>
             <span class="pill accent">Ragas</span>
           </div>
-
           <div class="skill-bars">
-
             <div class="skill-bar-item">
               <span>RAG</span>
-              <div class="bar">
-                <div class="bar-fill accent-fill" data-pct="88"></div>
-              </div>
+              <div class="bar"><div class="bar-fill accent-fill" data-pct="88"></div></div>
               <span>88%</span>
             </div>
-
             <div class="skill-bar-item">
               <span>LangGraph</span>
-              <div class="bar">
-                <div class="bar-fill accent-fill" data-pct="85"></div>
-              </div>
+              <div class="bar"><div class="bar-fill accent-fill" data-pct="85"></div></div>
               <span>85%</span>
             </div>
-
             <div class="skill-bar-item">
               <span>Prompt Engineering</span>
-              <div class="bar">
-                <div class="bar-fill accent-fill" data-pct="84"></div>
-              </div>
+              <div class="bar"><div class="bar-fill accent-fill" data-pct="84"></div></div>
               <span>84%</span>
             </div>
-
           </div>
-
         </div>
 
-        <div class="skill-group glass reveal">
-
+        <div class="skill-group glass">
           <div class="skill-group-header">
             <span class="skill-icon">🛡️</span>
-            <h3>AI Security & Observability</h3>
+            <h3>AI Security &amp; Observability</h3>
           </div>
-
           <div class="skill-pills">
             <span class="pill accent">Guardrails AI</span>
             <span class="pill accent">Input/Output Validation</span>
@@ -443,18 +336,15 @@
             <span class="pill accent">Portkey AI</span>
             <span class="pill accent">Multi-LLM Routing</span>
             <span class="pill accent">Automatic Fallbacks</span>
-            <span class="pill accent">Retry & Failover</span>
+            <span class="pill accent">Retry &amp; Failover</span>
           </div>
-
         </div>
 
-        <div class="skill-group glass reveal">
-
+        <div class="skill-group glass">
           <div class="skill-group-header">
             <span class="skill-icon">☁️</span>
-            <h3>Google Cloud & Agent Platform (Vertex AI)</h3>
+            <h3>Google Cloud &amp; Agent Platform (Vertex AI)</h3>
           </div>
-
           <div class="skill-pills">
             <span class="pill cyan">Google Cloud</span>
             <span class="pill cyan">Vertex AI</span>
@@ -474,16 +364,13 @@
             <span class="pill cyan">IAM</span>
             <span class="pill cyan">PAB</span>
           </div>
-
         </div>
 
-        <div class="skill-group glass reveal">
-
+        <div class="skill-group glass">
           <div class="skill-group-header">
             <span class="skill-icon">🌐</span>
-            <h3>Web & Backend Development</h3>
+            <h3>Web &amp; Backend Development</h3>
           </div>
-
           <div class="skill-pills">
             <span class="pill cyan">FastAPI</span>
             <span class="pill cyan">Spring Boot</span>
@@ -493,16 +380,13 @@
             <span class="pill cyan">HTML</span>
             <span class="pill cyan">CSS</span>
           </div>
-
         </div>
 
-        <div class="skill-group glass reveal">
-
+        <div class="skill-group glass">
           <div class="skill-group-header">
             <span class="skill-icon">🚀</span>
-            <h3>Cloud, Databases & DevOps</h3>
+            <h3>Cloud, Databases &amp; DevOps</h3>
           </div>
-
           <div class="skill-pills">
             <span class="pill">Qdrant</span>
             <span class="pill">FAISS</span>
@@ -522,124 +406,63 @@
             <span class="pill">Maven</span>
             <span class="pill">Postman</span>
           </div>
-
         </div>
 
       </div>
 
     </div>
-
   </section>
 
-  <!-- ================= PROJECTS ================= -->
+  <!-- Featured Projects -->
   <section id="projects" class="section">
-
     <div class="container">
 
       <div class="section-header">
-
-        <span class="section-tag mono">03 / projects</span>
-
+        <span class="section-tag mono">Engineering</span>
         <h2>Featured Projects</h2>
-
         <p class="section-sub">
-          AI, RAG, Agentic AI and full-stack applications
-          built with modern technologies.
+          AI, RAG, Agentic AI, and full-stack systems built for production reliability.
         </p>
-
       </div>
 
       <div class="filter-bar">
-
-        <button class="filter-btn active" data-filter="all">
-          All
-        </button>
-
-        <button class="filter-btn" data-filter="ai">
-          AI / ML
-        </button>
-
-        <button class="filter-btn" data-filter="fullstack">
-          Full Stack
-        </button>
-
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI / ML</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
       </div>
 
       <div class="projects-grid">
 
-        <!-- PROJECT - LANGGRAPH RAG WEB AGENT -->
-        <article class="project-card glass reveal" data-category="ai">
-
+        <!-- PROJECT 1: LangGraph RAG Web Agent -->
+        <article class="project-card glass" data-category="ai">
           <div class="project-top">
-
-            <div class="project-icon">
-              🧠
-            </div>
-
+            <div class="project-icon">🧠</div>
             <div class="project-links">
-
-              <!-- LIVE PROJECT -->
-              <a href="https://langgraph-rag-web-agent-05.streamlit.app/" target="_blank" rel="noopener noreferrer"
-                class="project-link live-link">
-                <span class="dot" style="width:6px;height:6px;"></span>
+              <a href="https://langgraph-rag-web-agent-05.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-link live-link">
                 Live Demo
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
               </a>
-
-              <!-- GITHUB -->
-              <a href="https://github.com/Aswinbose05/LangGraph-RAG-Web-Agent" target="_blank" rel="noopener noreferrer"
-                class="project-link">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+              <a href="https://github.com/Aswinbose05/LangGraph-RAG-Web-Agent" target="_blank" rel="noopener noreferrer" class="project-link">
                 GitHub
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
               </a>
-
             </div>
-
           </div>
 
           <h3>LangGraph RAG Web Agent</h3>
-
-          <p class="project-subtitle mono">
-            Agentic AI + RAG Web Assistant
-          </p>
-
+          <p class="project-subtitle mono">Agentic AI + RAG Web Assistant</p>
           <p class="project-desc">
-            An Agentic AI web application built with Python,
-            LangGraph and LangChain, using ReAct-based reasoning
-            for intelligent query processing, dynamic tool selection
-            and multi-step task execution.
+            An Agentic AI web application built with Python, LangGraph and LangChain, using ReAct-based reasoning for intelligent query processing, dynamic tool selection and multi-step task execution.
           </p>
-
           <ul class="project-features">
-
-            <li>
-              LangGraph ReAct agent workflow
-            </li>
-
-            <li>
-              Retrieval-Augmented Generation with Qdrant
-            </li>
-
-            <li>
-              Hugging Face embeddings for semantic retrieval
-            </li>
-
-            <li>
-              Real-time web search using Serper API
-            </li>
-
-            <li>
-              Custom tools and tool calling
-            </li>
-
-            <li>
-              Persistent conversational memory using SQLite
-            </li>
-
+            <li>LangGraph ReAct agent workflow</li>
+            <li>Retrieval-Augmented Generation with Qdrant</li>
+            <li>Hugging Face embeddings for semantic retrieval</li>
+            <li>Real-time web search using Serper API</li>
+            <li>Custom tools and tool calling</li>
+            <li>Persistent conversational memory using SQLite</li>
           </ul>
-
           <div class="project-stack">
-
             <span class="tag">Python</span>
             <span class="tag">LangGraph</span>
             <span class="tag">LangChain</span>
@@ -654,62 +477,38 @@
             <span class="tag">Serper API</span>
             <span class="tag">SQLite</span>
             <span class="tag">Streamlit</span>
-
           </div>
-
         </article>
 
-        <!-- PROJECT 1 -->
-        <article class="project-card glass reveal" data-category="fullstack">
-
+        <!-- PROJECT 2: Nexora AI -->
+        <article class="project-card glass" data-category="fullstack">
           <div class="project-top">
-
-            <div class="project-icon">
-              ✨
-            </div>
-
+            <div class="project-icon">✨</div>
             <div class="project-links">
-
-              <a href="https://nexora-ai-chi-seven.vercel.app/" target="_blank" rel="noopener noreferrer"
-                class="project-link live-link">
-                <span class="dot" style="width:6px;height:6px;"></span>
+              <a href="https://nexora-ai-chi-seven.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link live-link">
                 Live Demo
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
               </a>
-
               <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
                 GitHub
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
               </a>
-
             </div>
-
           </div>
 
           <h3>Nexora AI</h3>
-
-          <p class="project-subtitle mono">
-            AI-Powered Chat Application
-          </p>
-
+          <p class="project-subtitle mono">AI-Powered Chat Application</p>
           <p class="project-desc">
-            A modern AI chat application built with React.js
-            and Google Gemini API providing real-time AI responses,
-            persistent chat history and a responsive production-style UI.
+            A modern AI chat application built with React.js and Google Gemini API providing real-time AI responses, persistent chat history and a responsive production-style UI.
           </p>
-
           <ul class="project-features">
-
             <li>Google Gemini API integration</li>
             <li>Persistent chat history</li>
-            <li>Markdown & code rendering</li>
+            <li>Markdown &amp; code rendering</li>
             <li>Dark / Light theme</li>
             <li>AbortController error handling</li>
-
           </ul>
-
           <div class="project-stack">
-
             <span class="tag">React.js</span>
             <span class="tag">JavaScript</span>
             <span class="tag">Google Gemini API</span>
@@ -717,63 +516,39 @@
             <span class="tag">Vite</span>
             <span class="tag">HTML5</span>
             <span class="tag">CSS3</span>
-
           </div>
-
         </article>
 
-        <!-- PROJECT 2 -->
-        <article class="project-card glass reveal" data-category="ai">
-
+        <!-- PROJECT 3: Embedded Systems QA Assistant -->
+        <article class="project-card glass" data-category="ai">
           <div class="project-top">
-
-            <div class="project-icon">
-              📚
-            </div>
-
+            <div class="project-icon">📚</div>
             <div class="project-links">
-
-              <a href="https://academic-quea-assistant.streamlit.app/" target="_blank" rel="noopener noreferrer"
-                class="project-link live-link">
-                <span class="dot" style="width:6px;height:6px;"></span>
+              <a href="https://academic-quea-assistant.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-link live-link">
                 Live Demo
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
               </a>
-
               <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
                 GitHub
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
               </a>
-
             </div>
-
           </div>
 
           <h3>Embedded Systems QA Assistant</h3>
-
-          <p class="project-subtitle mono">
-            RAG-Based Academic QA System
-          </p>
-
+          <p class="project-subtitle mono">RAG-Based Academic QA System</p>
           <p class="project-desc">
-            A Retrieval-Augmented Generation system designed
-            for academic question answering with multi-format
-            document ingestion and semantic retrieval.
+            A Retrieval-Augmented Generation system designed for academic question answering with multi-format document ingestion and semantic retrieval.
           </p>
-
           <ul class="project-features">
-
             <li>PDF, Word, Excel and CSV ingestion</li>
             <li>YouTube transcript support</li>
-            <li>Document chunking & embeddings</li>
+            <li>Document chunking &amp; embeddings</li>
             <li>Vector database retrieval</li>
             <li>Conversational memory</li>
             <li>RAG evaluation using Ragas</li>
-
           </ul>
-
           <div class="project-stack">
-
             <span class="tag">Python</span>
             <span class="tag">FastAPI</span>
             <span class="tag">RAG</span>
@@ -786,64 +561,39 @@
             <span class="tag">Ragas</span>
             <span class="tag">LangSmith</span>
             <span class="tag">Streamlit</span>
-
           </div>
-
         </article>
 
-        <!-- PROJECT 3 -->
-        <article class="project-card glass reveal" data-category="ai">
-
+        <!-- PROJECT 4: AI Resume Analyzer -->
+        <article class="project-card glass" data-category="ai">
           <div class="project-top">
-
-            <div class="project-icon">
-              🧠
-            </div>
-
+            <div class="project-icon">🧠</div>
             <div class="project-links">
-
-              <a href="https://rolefit-ai-72f4.onrender.com/" target="_blank" rel="noopener noreferrer"
-                class="project-link live-link">
-                <span class="dot" style="width:6px;height:6px;"></span>
+              <a href="https://rolefit-ai-72f4.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link live-link">
                 Live Demo
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
               </a>
-
-              <a href="https://github.com/Aswinbose05/Resume_Job_Prepare" target="_blank" rel="noopener noreferrer"
-                class="project-link">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+              <a href="https://github.com/Aswinbose05/Resume_Job_Prepare" target="_blank" rel="noopener noreferrer" class="project-link">
                 GitHub
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
               </a>
-
             </div>
-
           </div>
 
-          <h3>AI Resume Analyzer & Job Preparation System</h3>
-
-          <p class="project-subtitle mono">
-            Multi-Agent AI Job Preparation Platform
-          </p>
-
+          <h3>AI Resume Analyzer &amp; Job Preparation System</h3>
+          <p class="project-subtitle mono">Multi-Agent AI Job Preparation Platform</p>
           <p class="project-desc">
-            A multi-agent AI system built with CrewAI to automate
-            resume tailoring, job description analysis and
-            interview preparation for target roles.
+            A multi-agent AI system built with CrewAI to automate resume tailoring, job description analysis and interview preparation for target roles.
           </p>
-
           <ul class="project-features">
-
             <li>Multi-agent orchestration</li>
             <li>Resume tailoring</li>
             <li>Job description analysis</li>
             <li>Interview question generation</li>
             <li>Real-time web data retrieval</li>
             <li>Serper API integration</li>
-
           </ul>
-
           <div class="project-stack">
-
             <span class="tag">Python</span>
             <span class="tag">CrewAI</span>
             <span class="tag">FastAPI</span>
@@ -852,64 +602,38 @@
             <span class="tag">Serper API</span>
             <span class="tag">Web Scraping</span>
             <span class="tag">LLMs</span>
-
           </div>
-
         </article>
 
-        <!-- PROJECT 4 -->
-        <article class="project-card glass reveal" data-category="fullstack">
-
+        <!-- PROJECT 5: Online Examination System -->
+        <article class="project-card glass" data-category="fullstack">
           <div class="project-top">
-
-            <div class="project-icon">
-              📝
-            </div>
-
+            <div class="project-icon">📝</div>
             <div class="project-links">
-
-              <!-- LIVE PROJECT -->
-              <a href="https://exam-system-frontend-gyb9.onrender.com" target="_blank" rel="noopener noreferrer"
-                class="project-link live-link">
-                <span class="dot" style="width:6px;height:6px;"></span>
+              <a href="https://exam-system-frontend-gyb9.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link live-link">
                 Live Demo
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
               </a>
-
-              <!-- GITHUB -->
               <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="project-link">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
                 GitHub
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
               </a>
-
             </div>
-
           </div>
 
           <h3>Online Examination System</h3>
-
-          <p class="project-subtitle mono">
-            Auto-Evaluation with NLP
-          </p>
-
+          <p class="project-subtitle mono">Auto-Evaluation with NLP</p>
           <p class="project-desc">
-            A cloud-ready online examination platform with
-            secure authentication, exam management and
-            NLP-based automated evaluation.
+            A cloud-ready online examination platform with secure authentication, exam management and NLP-based automated evaluation.
           </p>
-
           <ul class="project-features">
-
             <li>Secure authentication</li>
             <li>Exam lifecycle management</li>
             <li>TF-IDF evaluation</li>
             <li>Cosine similarity</li>
             <li>Instant result generation</li>
-
           </ul>
-
           <div class="project-stack">
-
             <span class="tag">Java</span>
             <span class="tag">Spring Boot</span>
             <span class="tag">MySQL</span>
@@ -918,264 +642,119 @@
             <span class="tag">JavaScript</span>
             <span class="tag">HTML5</span>
             <span class="tag">CSS3</span>
-
           </div>
-
         </article>
 
       </div>
 
     </div>
-
   </section>
 
-  <!-- ================= CERTIFICATIONS ================= -->
+  <!-- Certifications Section -->
   <section id="certifications" class="section section-alt">
-
     <div class="container">
 
       <div class="section-header">
-
-        <span class="section-tag mono">
-          04 / certifications
-        </span>
-
+        <span class="section-tag mono">Credentials</span>
         <h2>Certifications</h2>
-
         <p class="section-sub">
-          Professional certifications covering Generative AI,
-          Agentic AI, Prompt Engineering and Software Development.
+          Professional certifications covering Generative AI, Agentic AI, Prompt Engineering, and Software Development.
         </p>
-
       </div>
 
       <div class="certs-grid">
 
-        <!-- IBM GENERATIVE AI -->
-        <div class="cert-card glass reveal">
-
-          <div class="cert-badge ibm">
-            IBM
-          </div>
-
-          <h3>
-            IBM Generative AI Engineering
-          </h3>
-
-          <p class="cert-issuer">
-            IBM · Coursera
-          </p>
-
-          <p class="cert-desc">
-            Generative AI, LLMs, Transformers, RAG,
-            Hugging Face and AI application development.
-          </p>
-
-          <a href="https://coursera.org/verify/professional-cert/HPTUIYT05NFH" target="_blank" rel="noopener noreferrer"
-            class="cert-link">
+        <div class="cert-card glass">
+          <div class="cert-badge ibm">IBM</div>
+          <h3>IBM Generative AI Engineering</h3>
+          <p class="cert-issuer">IBM · Coursera</p>
+          <p class="cert-desc">Generative AI, LLMs, Transformers, RAG, Hugging Face and AI application development.</p>
+          <a href="https://coursera.org/verify/professional-cert/HPTUIYT05NFH" target="_blank" rel="noopener noreferrer" class="cert-link">
             Verify Certificate ↗
           </a>
-
         </div>
 
-        <!-- IBM RAG -->
-        <div class="cert-card glass reveal">
-
-          <div class="cert-badge ibm">
-            IBM
-          </div>
-
-          <h3>
-            IBM RAG and Agentic AI
-          </h3>
-
-          <p class="cert-issuer">
-            IBM · Coursera
-          </p>
-
-          <p class="cert-desc">
-            RAG, vector databases, LangGraph, CrewAI,
-            agentic workflows, tool calling and MCP.
-          </p>
-
-          <a href="https://coursera.org/verify/professional-cert/2RUHFCUR63X0" target="_blank" rel="noopener noreferrer"
-            class="cert-link">
+        <div class="cert-card glass">
+          <div class="cert-badge ibm">IBM</div>
+          <h3>IBM RAG and Agentic AI</h3>
+          <p class="cert-issuer">IBM · Coursera</p>
+          <p class="cert-desc">RAG, vector databases, LangGraph, CrewAI, agentic workflows, tool calling and MCP.</p>
+          <a href="https://coursera.org/verify/professional-cert/2RUHFCUR63X0" target="_blank" rel="noopener noreferrer" class="cert-link">
             Verify Certificate ↗
           </a>
-
         </div>
 
-        <!-- AMAZON -->
-        <div class="cert-card glass reveal">
-
-          <div class="cert-badge amazon">
-            AMZ
-          </div>
-
-          <h3>
-            Amazon Junior Software Developer
-          </h3>
-
-          <p class="cert-issuer">
-            Amazon · Coursera
-          </p>
-
-          <p class="cert-desc">
-            Software development fundamentals,
-            programming, databases and application development.
-          </p>
-
-          <a href="https://www.coursera.org/account/accomplishments/professional-cert/QBRXEFMA6DGX" target="_blank"
-            rel="noopener noreferrer" class="cert-link">
+        <div class="cert-card glass">
+          <div class="cert-badge amazon">AMZ</div>
+          <h3>Amazon Junior Software Developer</h3>
+          <p class="cert-issuer">Amazon · Coursera</p>
+          <p class="cert-desc">Software development fundamentals, programming, databases and application development.</p>
+          <a href="https://www.coursera.org/account/accomplishments/professional-cert/QBRXEFMA6DGX" target="_blank" rel="noopener noreferrer" class="cert-link">
             View Credential ↗
           </a>
-
         </div>
 
-        <!-- IBM AGENTS -->
-        <div class="cert-card glass reveal">
-
-          <div class="cert-badge ibm">
-            IBM
-          </div>
-
-          <h3>
-            Building AI Agents & Agentic Workflows
-          </h3>
-
-          <p class="cert-issuer">
-            IBM · Coursera
-          </p>
-
-          <p class="cert-desc">
-            AI agents, tool calling, orchestration,
-            agentic workflows and autonomous task execution.
-          </p>
-
-          <a href="https://www.coursera.org/account/accomplishments/specialization/SQT10P5XYJBF" target="_blank"
-            rel="noopener noreferrer" class="cert-link">
+        <div class="cert-card glass">
+          <div class="cert-badge ibm">IBM</div>
+          <h3>Building AI Agents &amp; Agentic Workflows</h3>
+          <p class="cert-issuer">IBM · Coursera</p>
+          <p class="cert-desc">AI agents, tool calling, orchestration, agentic workflows and autonomous task execution.</p>
+          <a href="https://www.coursera.org/account/accomplishments/specialization/SQT10P5XYJBF" target="_blank" rel="noopener noreferrer" class="cert-link">
             View Credential ↗
           </a>
-
         </div>
 
-        <!-- GOOGLE AI -->
-        <div class="cert-card glass reveal">
-
-          <div class="cert-badge google">
-            G
-          </div>
-
-          <h3>
-            Google AI Essentials
-          </h3>
-
-          <p class="cert-issuer">
-            Google · Coursera
-          </p>
-
-          <p class="cert-desc">
-            AI fundamentals, generative AI tools,
-            productivity and responsible AI practices.
-          </p>
-
-          <a href="https://www.coursera.org/account/accomplishments/professional-cert/JTN58LNMTOPV" target="_blank"
-            rel="noopener noreferrer" class="cert-link">
+        <div class="cert-card glass">
+          <div class="cert-badge google">G</div>
+          <h3>Google AI Essentials</h3>
+          <p class="cert-issuer">Google · Coursera</p>
+          <p class="cert-desc">AI fundamentals, generative AI tools, productivity and responsible AI practices.</p>
+          <a href="https://www.coursera.org/account/accomplishments/professional-cert/JTN58LNMTOPV" target="_blank" rel="noopener noreferrer" class="cert-link">
             View Credential ↗
           </a>
-
         </div>
 
-        <!-- GOOGLE PROMPTING -->
-        <div class="cert-card glass reveal">
-
-          <div class="cert-badge google">
-            G
-          </div>
-
-          <h3>
-            Google Prompting Essentials
-          </h3>
-
-          <p class="cert-issuer">
-            Google · Coursera
-          </p>
-
-          <p class="cert-desc">
-            Prompt engineering, prompt patterns,
-            AI-assisted workflows and responsible AI usage.
-          </p>
-
-          <a href="https://www.coursera.org/account/accomplishments/specialization/OE0CKSSOT4VM" target="_blank"
-            rel="noopener noreferrer" class="cert-link">
+        <div class="cert-card glass">
+          <div class="cert-badge google">G</div>
+          <h3>Google Prompting Essentials</h3>
+          <p class="cert-issuer">Google · Coursera</p>
+          <p class="cert-desc">Prompt engineering, prompt patterns, AI-assisted workflows and responsible AI usage.</p>
+          <a href="https://www.coursera.org/account/accomplishments/specialization/OE0CKSSOT4VM" target="_blank" rel="noopener noreferrer" class="cert-link">
             Verify Certificate ↗
           </a>
-
         </div>
 
       </div>
 
     </div>
-
   </section>
 
-  <!-- ================= EDUCATION ================= -->
+  <!-- Education Section -->
   <section id="education" class="section">
-
     <div class="container">
 
       <div class="section-header">
-
-        <span class="section-tag mono">
-          05 / education
-        </span>
-
+        <span class="section-tag mono">Academic</span>
         <h2>Education</h2>
-
       </div>
 
       <div class="timeline">
 
-        <div class="timeline-item reveal">
-
+        <div class="timeline-item">
           <div class="timeline-dot"></div>
-
           <div class="timeline-content glass">
-
             <div class="edu-header">
-
               <div>
-
-                <h3>
-                  B.E. Computer Science and Engineering
-                </h3>
-
-                <p class="edu-institution">
-                  VSB College of Engineering Technical Campus
-                </p>
-
-                <p class="edu-location mono">
-                  Coimbatore, Tamil Nadu
-                </p>
-
+                <h3>B.E. Computer Science and Engineering</h3>
+                <p class="edu-institution">VSB College of Engineering Technical Campus</p>
+                <p class="edu-location mono">Coimbatore, Tamil Nadu</p>
               </div>
-
               <div class="edu-meta">
-
-                <span>
-                  2022 – 2026
-                </span>
-
-                <strong class="grad-text">
-                  8.0 / 10
-                </strong>
-
+                <span>2022 – 2026</span>
+                <strong>8.0 / 10</strong>
               </div>
-
             </div>
-
             <div class="course-pills">
-
               <span>Data Structures</span>
               <span>Algorithms</span>
               <span>Machine Learning</span>
@@ -1184,400 +763,229 @@
               <span>Operating Systems</span>
               <span>Computer Networks</span>
               <span>Software Engineering</span>
-
             </div>
-
           </div>
-
         </div>
 
-        <div class="timeline-item reveal">
-
+        <div class="timeline-item">
           <div class="timeline-dot small"></div>
-
           <div class="timeline-content glass">
-
             <div class="edu-header">
-
               <div>
-
-                <h3>
-                  HSC
-                </h3>
-
-                <p class="edu-institution">
-                  Devi Matriculation Higher Secondary School
-                </p>
-
-                <p class="edu-location mono">
-                  Mannargudi, Tamil Nadu
-                </p>
-
+                <h3>HSC</h3>
+                <p class="edu-institution">Devi Matriculation Higher Secondary School</p>
+                <p class="edu-location mono">Mannargudi, Tamil Nadu</p>
               </div>
-
               <div class="edu-meta">
                 <span>2021 – 2022</span>
                 <strong>74.6%</strong>
               </div>
-
             </div>
-
           </div>
-
         </div>
 
-        <div class="timeline-item reveal">
-
+        <div class="timeline-item">
           <div class="timeline-dot small"></div>
-
           <div class="timeline-content glass">
-
             <div class="edu-header">
-
               <div>
-
-                <h3>
-                  SSLC
-                </h3>
-
-                <p class="edu-institution">
-                  Devi Matriculation Higher Secondary School
-                </p>
-
-                <p class="edu-location mono">
-                  Mannargudi, Tamil Nadu
-                </p>
-
+                <h3>SSLC</h3>
+                <p class="edu-institution">Devi Matriculation Higher Secondary School</p>
+                <p class="edu-location mono">Mannargudi, Tamil Nadu</p>
               </div>
-
               <div class="edu-meta">
                 <span>2019 – 2020</span>
                 <strong>76.8%</strong>
               </div>
-
             </div>
-
           </div>
-
         </div>
 
       </div>
 
     </div>
-
   </section>
 
-  <!-- ================= EXPERIENCE ================= -->
+  <!-- Work Experience -->
   <section id="experience" class="section section-alt">
-
     <div class="container">
 
       <div class="section-header">
-
-        <span class="section-tag mono">
-          06 / experience
-        </span>
-
+        <span class="section-tag mono">Experience</span>
         <h2>Work Experience</h2>
-
       </div>
 
-      <div class="exp-card glass reveal">
-
+      <div class="exp-card glass">
         <div class="exp-header">
-
           <div>
-
-            <h3>
-              Java Full Stack Developer Intern
-            </h3>
-
-            <p class="exp-company grad-text">
-              ZIDIO Development
-            </p>
-
+            <h3>Java Full Stack Developer Intern</h3>
+            <p class="exp-company">ZIDIO Development</p>
           </div>
-
-          <div class="exp-meta">
-
-            <span class="mono">
-              Mar 2025 – Apr 2025
-            </span>
-
-            <span>
-              Remote
-            </span>
-
+          <div class="exp-meta mono">
+            <span>Mar 2025 – Apr 2025</span>
+            <span>Remote</span>
           </div>
-
         </div>
 
         <ul class="exp-bullets">
-
-          <li>
-            Architected and delivered an Expense Manager
-            Application using Java and Spring Boot with
-            layered REST APIs and full CRUD operations.
-          </li>
-
-          <li>
-            Implemented MySQL backend integration,
-            real-time input validation and frontend-backend
-            integration using HTML and CSS.
-          </li>
-
-          <li>
-            Applied RESTful design principles and MVC
-            architecture to build maintainable software.
-          </li>
-
+          <li>Architected and delivered an Expense Manager Application using Java and Spring Boot with layered REST APIs and full CRUD operations.</li>
+          <li>Implemented MySQL backend integration, real-time input validation, and frontend-backend integration using HTML and CSS.</li>
+          <li>Applied RESTful design principles and MVC architecture to build maintainable software.</li>
         </ul>
 
         <div class="project-stack">
-
           <span class="tag">Java</span>
           <span class="tag">Spring Boot</span>
           <span class="tag">MySQL</span>
           <span class="tag">HTML/CSS</span>
-
         </div>
-
       </div>
 
     </div>
-
   </section>
 
-  <!-- ================= ACHIEVEMENTS ================= -->
+  <!-- Highlights -->
   <section id="achievements" class="section">
-
     <div class="container">
 
       <div class="section-header">
-
-        <span class="section-tag mono">
-          07 / achievements
-        </span>
-
+        <span class="section-tag mono">Track Record</span>
         <h2>Highlights</h2>
-
       </div>
 
       <div class="ach-grid">
-
-        <div class="ach-item glass reveal">
+        <div class="ach-item glass">
           <span>01</span>
-          <p>
-            Built AI applications using LangChain,
-            LangGraph and multi-agent workflows.
-          </p>
+          <p>Built AI applications using LangChain, LangGraph and multi-agent workflows.</p>
         </div>
-
-        <div class="ach-item glass reveal">
+        <div class="ach-item glass">
           <span>02</span>
-          <p>
-            Developed RAG systems supporting
-            multi-format document ingestion and retrieval.
-          </p>
+          <p>Developed RAG systems supporting multi-format document ingestion and retrieval.</p>
         </div>
-
-        <div class="ach-item glass reveal">
+        <div class="ach-item glass">
           <span>03</span>
-          <p>
-            Implemented RAG evaluation using
-            the Ragas framework.
-          </p>
+          <p>Implemented RAG evaluation using the Ragas framework.</p>
         </div>
-
-        <div class="ach-item glass reveal">
+        <div class="ach-item glass">
           <span>04</span>
-          <p>
-            Built an NLP auto-evaluation engine
-            using TF-IDF and Cosine Similarity.
-          </p>
+          <p>Built an NLP auto-evaluation engine using TF-IDF and Cosine Similarity.</p>
         </div>
-
-        <div class="ach-item glass reveal">
+        <div class="ach-item glass">
           <span>05</span>
-          <p>
-            Completed six professional certifications
-            from IBM, Amazon and Google.
-          </p>
+          <p>Completed six professional certifications from IBM, Amazon and Google.</p>
         </div>
-
-        <div class="ach-item glass reveal">
+        <div class="ach-item glass">
           <span>06</span>
-          <p>
-            Developed a CrewAI multi-agent pipeline
-            for resume analysis and job preparation.
-          </p>
+          <p>Developed a CrewAI multi-agent pipeline for resume analysis and job preparation.</p>
         </div>
-
       </div>
 
     </div>
-
   </section>
 
-  <!-- ================= RESUME ================= -->
+  <!-- Resume Section -->
   <section id="resume" class="section section-alt">
-
     <div class="container">
 
       <div class="section-header">
-
-        <span class="section-tag mono">
-          08 / resume
-        </span>
-
+        <span class="section-tag mono">Document</span>
         <h2>Resume</h2>
-
       </div>
 
-      <div class="resume-card glass reveal">
-
+      <div class="resume-card glass">
         <div class="resume-preview">
-
           <div class="resume-mock">
-
             <div class="rm-title"></div>
             <div class="rm-line wide"></div>
             <div class="rm-line medium"></div>
-
             <div class="rm-break"></div>
-
             <div class="rm-line short"></div>
             <div class="rm-line wide"></div>
             <div class="rm-line medium"></div>
-
             <div class="rm-break"></div>
-
             <div class="rm-line wide"></div>
             <div class="rm-line medium"></div>
-
           </div>
-
         </div>
 
         <div class="resume-info">
-
-          <h3>
-            Aswin B
-          </h3>
-
-          <p class="grad-text">
-            AI Engineer · Software Developer
-          </p>
-
-          <p>
-            AI, software development, full-stack and
-            Generative AI experience.
-          </p>
+          <h3>Aswin B</h3>
+          <p class="role-title mono">AI Engineer · Software Developer</p>
+          <p>Complete professional profile covering AI systems, software development, full-stack architectures, and production projects.</p>
 
           <div class="resume-actions">
-
             <a href="Aswin_B_Resume.pdf" download class="btn btn-primary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
               Download PDF
             </a>
-
             <a href="Aswin_B_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-              View Resume
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              View Resume ↗
             </a>
-
           </div>
-
         </div>
-
       </div>
 
     </div>
-
   </section>
 
-  <!-- ================= CONTACT ================= -->
+  <!-- Contact Section -->
   <section id="contact" class="section">
-
     <div class="container">
 
       <div class="section-header">
-
-        <span class="section-tag mono">
-          09 / contact
-        </span>
-
+        <span class="section-tag mono">Connect</span>
         <h2>Let's Connect</h2>
-
         <p class="section-sub">
-          Open to AI Engineer, Software Developer,
-          Backend and Full Stack opportunities.
+          Open to AI Engineer, Software Developer, Backend, and Full Stack opportunities.
         </p>
-
       </div>
 
       <div class="contact-grid">
 
-        <div class="contact-info reveal">
-
+        <div class="contact-info">
           <a href="mailto:aswinbose05@gmail.com" class="contact-item glass">
-
             <div class="ci-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             </div>
-
             <div>
               <span class="ci-label mono">Email</span>
               <span class="ci-value">aswinbose05@gmail.com</span>
             </div>
-
           </a>
 
           <a href="https://linkedin.com/in/aswinbose05" target="_blank" rel="noopener noreferrer" class="contact-item glass">
-
             <div class="ci-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.46 1.46 0 1 0 0-2.92 1.46 1.46 0 0 0 0 2.92M7.86 18.5v-8.37H5.07v8.37h2.79Z"/></svg>
             </div>
-
             <div>
               <span class="ci-label mono">LinkedIn</span>
               <span class="ci-value">linkedin.com/in/aswinbose05</span>
             </div>
-
           </a>
 
           <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="contact-item glass">
-
             <div class="ci-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
             </div>
-
             <div>
               <span class="ci-label mono">GitHub</span>
               <span class="ci-value">github.com/Aswinbose05</span>
             </div>
-
           </a>
 
           <div class="contact-item glass">
-
             <div class="ci-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
-
             <div>
               <span class="ci-label mono">Location</span>
               <span class="ci-value">Coimbatore, India</span>
             </div>
-
           </div>
-
         </div>
 
-        <div class="contact-form-wrap reveal">
-
+        <div class="contact-form-wrap">
           <form class="contact-form glass" id="contactForm" novalidate>
-
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" placeholder="Your name" required />
@@ -1599,59 +1007,41 @@
             </button>
 
             <div id="formStatus" class="form-status" aria-live="polite"></div>
-
           </form>
-
         </div>
 
       </div>
 
     </div>
-
   </section>
 
-  <!-- ================= FOOTER ================= -->
+  <!-- Footer -->
   <footer class="footer">
-
     <div class="container">
 
       <div class="footer-grid">
-
         <div class="footer-brand">
-
           <a href="#hero" class="nav-logo">
             <span class="mono">&lt;</span>AB<span class="mono">/&gt;</span>
           </a>
-
           <p>
-            Building intelligent AI systems,
-            agentic workflows and scalable software.
+            Building intelligent AI systems, agentic workflows, and scalable software solutions.
           </p>
-
           <div class="footer-socials">
-
-            <a href="https://linkedin.com/in/aswinbose05" target="_blank" rel="noopener noreferrer" class="social-link"
-              aria-label="LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.46 1.46 0 1 0 0-2.92 1.46 1.46 0 0 0 0 2.92M7.86 18.5v-8.37H5.07v8.37h2.79Z"/></svg>
+            <a href="https://linkedin.com/in/aswinbose05" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.46 1.46 0 1 0 0-2.92 1.46 1.46 0 0 0 0 2.92M7.86 18.5v-8.37H5.07v8.37h2.79Z"/></svg>
             </a>
-
-            <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="social-link"
-              aria-label="GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+            <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
             </a>
-
             <a href="mailto:aswinbose05@gmail.com" class="social-link" aria-label="Email">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             </a>
-
           </div>
-
         </div>
 
         <div class="footer-links">
-
-          <h4>Quick Links</h4>
-
+          <h4>Navigation</h4>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
@@ -1659,49 +1049,34 @@
           <a href="#education">Education</a>
           <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
-
         </div>
 
         <div class="footer-links">
-
-          <h4>Focus</h4>
-
+          <h4>Focus Domains</h4>
           <a href="#projects">Generative AI</a>
           <a href="#projects">Agentic AI</a>
-          <a href="#projects">RAG</a>
-          <a href="#projects">LangGraph</a>
-          <a href="#projects">Full Stack</a>
-
+          <a href="#projects">RAG Architectures</a>
+          <a href="#projects">LangGraph &amp; CrewAI</a>
+          <a href="#projects">Backend APIs</a>
         </div>
-
       </div>
 
       <div class="footer-bottom">
-
-        <p class="mono">
-          © 2026 Aswin B
-        </p>
-
-        <p class="mono">
-          <span class="dot" style="display:inline-block;margin-right:6px;"></span>
-          Open to opportunities
-        </p>
-
+        <p class="mono">© 2026 Aswin B</p>
+        <p class="mono"><span class="dot" style="display:inline-block;margin-right:6px;"></span>Open to opportunities</p>
       </div>
 
     </div>
-
   </footer>
 
-  <!-- ================= BACK TO TOP ================= -->
+  <!-- Back to Top Button -->
   <button id="backToTop" class="back-to-top" aria-label="Back to top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
 
-  <script src="script.js"></script>
-
+  <script src="script.js?v=10"></script>
 </body>
 
 </html>

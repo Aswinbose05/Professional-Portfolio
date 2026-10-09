@@ -9,22 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
      LOADER & INITIAL ANIMATIONS
      ========================================================= */
   const loader = document.getElementById("loader");
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      if (loader) {
-        loader.classList.add("hide");
-      }
+  function hideLoader() {
+    if (loader && !loader.classList.contains("hide")) {
+      loader.classList.add("hide");
       animateBars();
-    }, 700);
-  });
-
-  // Fallback in case load event already fired
-  if (document.readyState === "complete") {
-    setTimeout(() => {
-      if (loader) loader.classList.add("hide");
-      animateBars();
-    }, 700);
+    }
   }
+  window.addEventListener("load", () => setTimeout(hideLoader, 250));
+  setTimeout(hideLoader, 800); // Failsafe so user never waits
 
   /* =========================================================
      SCROLL PROGRESS BAR & NAVBAR SCROLL
