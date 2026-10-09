@@ -32,8 +32,15 @@
 
 <body>
 
-  <!-- ================= LOADER ================= -->
+  <!-- ================= SCROLL PROGRESS ================= -->
+  <div id="scrollProgress" class="scroll-progress"></div>
 
+  <!-- ================= AMBIENT GLOW BACKDROPS ================= -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-mid" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+
+  <!-- ================= LOADER ================= -->
   <div id="loader">
     <div class="loader-inner">
       <div class="loader-ring"></div>
@@ -44,11 +51,9 @@
   </div>
 
   <!-- ================= PARTICLES ================= -->
-
   <canvas id="particles"></canvas>
 
   <!-- ================= NAVBAR ================= -->
-
   <nav id="navbar">
     <div class="nav-inner">
 
@@ -103,13 +108,15 @@
   </nav>
 
   <!-- ================= HERO ================= -->
-
   <section id="hero" class="hero">
 
     <div class="hero-content">
 
       <p class="hero-eyebrow mono">
-        <span class="dot"></span>
+        <span class="dot-wrap">
+          <span class="dot-pulse"></span>
+          <span class="dot"></span>
+        </span>
         Available for opportunities
       </p>
 
@@ -129,11 +136,13 @@
       <div class="hero-actions">
 
         <a href="Aswin_B_Resume.pdf" download class="btn btn-primary">
-          ↓ Download Resume
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          Download Resume
         </a>
 
         <a href="#projects" class="btn btn-outline">
           View Projects
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
 
       </div>
@@ -142,16 +151,16 @@
 
         <a href="https://linkedin.com/in/aswinbose05" target="_blank" rel="noopener noreferrer" class="social-link"
           aria-label="LinkedIn">
-          in
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.46 1.46 0 1 0 0-2.92 1.46 1.46 0 0 0 0 2.92M7.86 18.5v-8.37H5.07v8.37h2.79Z"/></svg>
         </a>
 
         <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="social-link"
           aria-label="GitHub">
-          GH
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
         </a>
 
         <a href="mailto:aswinbose05@gmail.com" class="social-link" aria-label="Email">
-          @
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         </a>
 
       </div>
@@ -163,7 +172,8 @@
       <div class="avatar-ring">
 
         <div class="avatar-placeholder">
-          AB
+          <span>AB</span>
+          <div class="core-glow"></div>
         </div>
 
         <div class="ring r1"></div>
@@ -173,28 +183,26 @@
       </div>
 
       <div class="float-badge b1 mono">
-        Python
+        <span>⚡</span> Python
       </div>
 
       <div class="float-badge b2 mono">
-        LangGraph
+        <span>🧠</span> LangGraph
       </div>
 
       <div class="float-badge b3 mono">
-        RAG
+        <span>🔍</span> RAG
       </div>
 
       <div class="float-badge b4 mono">
-        CrewAI
+        <span>🤖</span> CrewAI
       </div>
 
     </div>
 
   </section>
 
-
   <!-- ================= ABOUT ================= -->
-
   <section id="about" class="section">
 
     <div class="container">
@@ -249,7 +257,6 @@
 
         </div>
 
-
         <div class="about-cards reveal">
 
           <div class="info-card glass">
@@ -296,9 +303,7 @@
 
   </section>
 
-
   <!-- ================= SKILLS ================= -->
-
   <section id="skills" class="section section-alt">
 
     <div class="container">
@@ -306,6 +311,9 @@
       <div class="section-header">
         <span class="section-tag mono">02 / skills</span>
         <h2>Technical Skills</h2>
+        <p class="section-sub">
+          Core competencies, specialized frameworks, AI security, and production tooling.
+        </p>
       </div>
 
       <div class="skills-grid">
@@ -366,7 +374,6 @@
 
         </div>
 
-
         <div class="skill-group glass reveal">
 
           <div class="skill-group-header">
@@ -375,7 +382,6 @@
           </div>
 
           <div class="skill-pills">
-
             <span class="pill accent">Machine Learning</span>
             <span class="pill accent">Generative AI</span>
             <span class="pill accent">LLMs</span>
@@ -388,7 +394,6 @@
             <span class="pill accent">Prompt Engineering</span>
             <span class="pill accent">RAG Evaluation</span>
             <span class="pill accent">Ragas</span>
-
           </div>
 
           <div class="skill-bars">
@@ -421,7 +426,6 @@
 
         </div>
 
-
         <div class="skill-group glass reveal">
 
           <div class="skill-group-header">
@@ -430,7 +434,6 @@
           </div>
 
           <div class="skill-pills">
-
             <span class="pill accent">Guardrails AI</span>
             <span class="pill accent">Input/Output Validation</span>
             <span class="pill accent">Prompt Injection Defense</span>
@@ -441,11 +444,9 @@
             <span class="pill accent">Multi-LLM Routing</span>
             <span class="pill accent">Automatic Fallbacks</span>
             <span class="pill accent">Retry & Failover</span>
-
           </div>
 
         </div>
-
 
         <div class="skill-group glass reveal">
 
@@ -455,7 +456,6 @@
           </div>
 
           <div class="skill-pills">
-
             <span class="pill cyan">Google Cloud</span>
             <span class="pill cyan">Vertex AI</span>
             <span class="pill cyan">Agent Development Kit (ADK)</span>
@@ -473,11 +473,9 @@
             <span class="pill cyan">GKE</span>
             <span class="pill cyan">IAM</span>
             <span class="pill cyan">PAB</span>
-
           </div>
 
         </div>
-
 
         <div class="skill-group glass reveal">
 
@@ -487,7 +485,6 @@
           </div>
 
           <div class="skill-pills">
-
             <span class="pill cyan">FastAPI</span>
             <span class="pill cyan">Spring Boot</span>
             <span class="pill cyan">REST APIs</span>
@@ -495,11 +492,9 @@
             <span class="pill cyan">JavaScript</span>
             <span class="pill cyan">HTML</span>
             <span class="pill cyan">CSS</span>
-
           </div>
 
         </div>
-
 
         <div class="skill-group glass reveal">
 
@@ -509,7 +504,6 @@
           </div>
 
           <div class="skill-pills">
-
             <span class="pill">Qdrant</span>
             <span class="pill">FAISS</span>
             <span class="pill">Chroma</span>
@@ -527,7 +521,6 @@
             <span class="pill">Web Scraping</span>
             <span class="pill">Maven</span>
             <span class="pill">Postman</span>
-
           </div>
 
         </div>
@@ -538,9 +531,7 @@
 
   </section>
 
-
   <!-- ================= PROJECTS ================= -->
-
   <section id="projects" class="section">
 
     <div class="container">
@@ -558,7 +549,6 @@
 
       </div>
 
-
       <div class="filter-bar">
 
         <button class="filter-btn active" data-filter="all">
@@ -575,11 +565,9 @@
 
       </div>
 
-
       <div class="projects-grid">
 
         <!-- PROJECT - LANGGRAPH RAG WEB AGENT -->
-
         <article class="project-card glass reveal" data-category="ai">
 
           <div class="project-top">
@@ -593,27 +581,27 @@
               <!-- LIVE PROJECT -->
               <a href="https://langgraph-rag-web-agent-05.streamlit.app/" target="_blank" rel="noopener noreferrer"
                 class="project-link live-link">
-                Live Demo ↗
+                <span class="dot" style="width:6px;height:6px;"></span>
+                Live Demo
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
               </a>
 
               <!-- GITHUB -->
               <a href="https://github.com/Aswinbose05/LangGraph-RAG-Web-Agent" target="_blank" rel="noopener noreferrer"
                 class="project-link">
-                GitHub ↗
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+                GitHub
               </a>
 
             </div>
 
           </div>
 
-
           <h3>LangGraph RAG Web Agent</h3>
-
 
           <p class="project-subtitle mono">
             Agentic AI + RAG Web Assistant
           </p>
-
 
           <p class="project-desc">
             An Agentic AI web application built with Python,
@@ -621,7 +609,6 @@
             for intelligent query processing, dynamic tool selection
             and multi-step task execution.
           </p>
-
 
           <ul class="project-features">
 
@@ -651,7 +638,6 @@
 
           </ul>
 
-
           <div class="project-stack">
 
             <span class="tag">Python</span>
@@ -673,9 +659,7 @@
 
         </article>
 
-
         <!-- PROJECT 1 -->
-
         <article class="project-card glass reveal" data-category="fullstack">
 
           <div class="project-top">
@@ -688,11 +672,14 @@
 
               <a href="https://nexora-ai-chi-seven.vercel.app/" target="_blank" rel="noopener noreferrer"
                 class="project-link live-link">
-                Live Demo ↗
+                <span class="dot" style="width:6px;height:6px;"></span>
+                Live Demo
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
               </a>
 
               <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="project-link">
-                GitHub ↗
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+                GitHub
               </a>
 
             </div>
@@ -735,9 +722,7 @@
 
         </article>
 
-
         <!-- PROJECT 2 -->
-
         <article class="project-card glass reveal" data-category="ai">
 
           <div class="project-top">
@@ -748,14 +733,16 @@
 
             <div class="project-links">
 
-              <a href="https://embeddeding-systems-qa-assistant.onrender.com/" target="_blank" rel="noopener noreferrer"
+              <a href="https://academic-quea-assistant.streamlit.app/" target="_blank" rel="noopener noreferrer"
                 class="project-link live-link">
-                Live Demo ↗
+                <span class="dot" style="width:6px;height:6px;"></span>
+                Live Demo
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
               </a>
 
-              <a href="https://github.com/Aswinbose05/Embedded-Systems-QA-Assistant" target="_blank"
-                rel="noopener noreferrer" class="project-link">
-                GitHub ↗
+              <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="project-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+                GitHub
               </a>
 
             </div>
@@ -804,9 +791,7 @@
 
         </article>
 
-
         <!-- PROJECT 3 -->
-
         <article class="project-card glass reveal" data-category="ai">
 
           <div class="project-top">
@@ -819,12 +804,15 @@
 
               <a href="https://rolefit-ai-72f4.onrender.com/" target="_blank" rel="noopener noreferrer"
                 class="project-link live-link">
-                Live Demo ↗
+                <span class="dot" style="width:6px;height:6px;"></span>
+                Live Demo
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
               </a>
 
               <a href="https://github.com/Aswinbose05/Resume_Job_Prepare" target="_blank" rel="noopener noreferrer"
                 class="project-link">
-                GitHub ↗
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+                GitHub
               </a>
 
             </div>
@@ -869,9 +857,7 @@
 
         </article>
 
-
         <!-- PROJECT 4 -->
-
         <article class="project-card glass reveal" data-category="fullstack">
 
           <div class="project-top">
@@ -885,12 +871,15 @@
               <!-- LIVE PROJECT -->
               <a href="https://exam-system-frontend-gyb9.onrender.com" target="_blank" rel="noopener noreferrer"
                 class="project-link live-link">
-                Live Demo ↗
+                <span class="dot" style="width:6px;height:6px;"></span>
+                Live Demo
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
               </a>
 
               <!-- GITHUB -->
               <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="project-link">
-                GitHub ↗
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+                GitHub
               </a>
 
             </div>
@@ -934,17 +923,13 @@
 
         </article>
 
-
-
       </div>
 
     </div>
 
   </section>
 
-
   <!-- ================= CERTIFICATIONS ================= -->
-
   <section id="certifications" class="section section-alt">
 
     <div class="container">
@@ -964,12 +949,9 @@
 
       </div>
 
-
       <div class="certs-grid">
 
-
         <!-- IBM GENERATIVE AI -->
-
         <div class="cert-card glass reveal">
 
           <div class="cert-badge ibm">
@@ -996,9 +978,7 @@
 
         </div>
 
-
         <!-- IBM RAG -->
-
         <div class="cert-card glass reveal">
 
           <div class="cert-badge ibm">
@@ -1025,9 +1005,7 @@
 
         </div>
 
-
         <!-- AMAZON -->
-
         <div class="cert-card glass reveal">
 
           <div class="cert-badge amazon">
@@ -1054,9 +1032,7 @@
 
         </div>
 
-
         <!-- IBM AGENTS -->
-
         <div class="cert-card glass reveal">
 
           <div class="cert-badge ibm">
@@ -1083,9 +1059,7 @@
 
         </div>
 
-
         <!-- GOOGLE AI -->
-
         <div class="cert-card glass reveal">
 
           <div class="cert-badge google">
@@ -1112,9 +1086,7 @@
 
         </div>
 
-
         <!-- GOOGLE PROMPTING -->
-
         <div class="cert-card glass reveal">
 
           <div class="cert-badge google">
@@ -1147,9 +1119,7 @@
 
   </section>
 
-
   <!-- ================= EDUCATION ================= -->
-
   <section id="education" class="section">
 
     <div class="container">
@@ -1164,9 +1134,7 @@
 
       </div>
 
-
       <div class="timeline">
-
 
         <div class="timeline-item reveal">
 
@@ -1223,7 +1191,6 @@
 
         </div>
 
-
         <div class="timeline-item reveal">
 
           <div class="timeline-dot small"></div>
@@ -1258,7 +1225,6 @@
           </div>
 
         </div>
-
 
         <div class="timeline-item reveal">
 
@@ -1301,9 +1267,7 @@
 
   </section>
 
-
   <!-- ================= EXPERIENCE ================= -->
-
   <section id="experience" class="section section-alt">
 
     <div class="container">
@@ -1317,7 +1281,6 @@
         <h2>Work Experience</h2>
 
       </div>
-
 
       <div class="exp-card glass reveal">
 
@@ -1349,7 +1312,6 @@
 
         </div>
 
-
         <ul class="exp-bullets">
 
           <li>
@@ -1371,7 +1333,6 @@
 
         </ul>
 
-
         <div class="project-stack">
 
           <span class="tag">Java</span>
@@ -1387,9 +1348,7 @@
 
   </section>
 
-
   <!-- ================= ACHIEVEMENTS ================= -->
-
   <section id="achievements" class="section">
 
     <div class="container">
@@ -1403,7 +1362,6 @@
         <h2>Highlights</h2>
 
       </div>
-
 
       <div class="ach-grid">
 
@@ -1461,9 +1419,7 @@
 
   </section>
 
-
   <!-- ================= RESUME ================= -->
-
   <section id="resume" class="section section-alt">
 
     <div class="container">
@@ -1477,7 +1433,6 @@
         <h2>Resume</h2>
 
       </div>
-
 
       <div class="resume-card glass reveal">
 
@@ -1504,7 +1459,6 @@
 
         </div>
 
-
         <div class="resume-info">
 
           <h3>
@@ -1523,11 +1477,13 @@
           <div class="resume-actions">
 
             <a href="Aswin_B_Resume.pdf" download class="btn btn-primary">
-              ↓ Download PDF
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              Download PDF
             </a>
 
             <a href="Aswin_B_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
               View Resume
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
             </a>
 
           </div>
@@ -1540,9 +1496,7 @@
 
   </section>
 
-
   <!-- ================= CONTACT ================= -->
-
   <section id="contact" class="section">
 
     <div class="container">
@@ -1562,135 +1516,86 @@
 
       </div>
 
-
       <div class="contact-grid">
 
         <div class="contact-info reveal">
 
-          <div class="contact-item glass">
+          <a href="mailto:aswinbose05@gmail.com" class="contact-item glass">
 
-            <span class="ci-icon">@</span>
-
-            <div>
-
-              <span class="ci-label mono">
-                Email
-              </span>
-
-              <a href="mailto:aswinbose05@gmail.com" class="ci-value">
-                aswinbose05@gmail.com
-              </a>
-
+            <div class="ci-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             </div>
 
-          </div>
-
-
-          <div class="contact-item glass">
-
-            <span class="ci-icon">
-              in
-            </span>
-
             <div>
-
-              <span class="ci-label mono">
-                LinkedIn
-              </span>
-
-              <a href="https://linkedin.com/in/aswinbose05" target="_blank" rel="noopener noreferrer" class="ci-value">
-                linkedin.com/in/aswinbose05
-              </a>
-
+              <span class="ci-label mono">Email</span>
+              <span class="ci-value">aswinbose05@gmail.com</span>
             </div>
 
-          </div>
+          </a>
 
+          <a href="https://linkedin.com/in/aswinbose05" target="_blank" rel="noopener noreferrer" class="contact-item glass">
 
-          <div class="contact-item glass">
-
-            <span class="ci-icon">
-              GH
-            </span>
-
-            <div>
-
-              <span class="ci-label mono">
-                GitHub
-              </span>
-
-              <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="ci-value">
-                github.com/Aswinbose05
-              </a>
-
+            <div class="ci-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.46 1.46 0 1 0 0-2.92 1.46 1.46 0 0 0 0 2.92M7.86 18.5v-8.37H5.07v8.37h2.79Z"/></svg>
             </div>
 
-          </div>
+            <div>
+              <span class="ci-label mono">LinkedIn</span>
+              <span class="ci-value">linkedin.com/in/aswinbose05</span>
+            </div>
 
+          </a>
+
+          <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="contact-item glass">
+
+            <div class="ci-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+            </div>
+
+            <div>
+              <span class="ci-label mono">GitHub</span>
+              <span class="ci-value">github.com/Aswinbose05</span>
+            </div>
+
+          </a>
 
           <div class="contact-item glass">
 
-            <span class="ci-icon">
-              📍
-            </span>
+            <div class="ci-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
 
             <div>
-
-              <span class="ci-label mono">
-                Location
-              </span>
-
-              <span class="ci-value">
-                Coimbatore, India
-              </span>
-
+              <span class="ci-label mono">Location</span>
+              <span class="ci-value">Coimbatore, India</span>
             </div>
 
           </div>
 
         </div>
 
-
         <div class="contact-form-wrap reveal">
 
           <form class="contact-form glass" id="contactForm" novalidate>
 
             <div class="form-group">
-
-              <label for="name">
-                Name
-              </label>
-
+              <label for="name">Name</label>
               <input type="text" id="name" name="name" placeholder="Your name" required />
-
             </div>
 
-
             <div class="form-group">
-
-              <label for="email">
-                Email
-              </label>
-
+              <label for="email">Email</label>
               <input type="email" id="email" name="email" placeholder="your@email.com" required />
-
             </div>
-
 
             <div class="form-group">
-
-              <label for="message">
-                Message
-              </label>
-
-              <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity..."
-                required></textarea>
-
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
             </div>
-
 
             <button type="submit" class="btn btn-primary w-full">
-              Send Message →
+              Send Message
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
             </button>
 
             <div id="formStatus" class="form-status" aria-live="polite"></div>
@@ -1705,9 +1610,7 @@
 
   </section>
 
-
   <!-- ================= FOOTER ================= -->
-
   <footer class="footer">
 
     <div class="container">
@@ -1727,22 +1630,23 @@
 
           <div class="footer-socials">
 
-            <a href="https://linkedin.com/in/aswinbose05" target="_blank" rel="noopener noreferrer" class="social-link">
-              in
+            <a href="https://linkedin.com/in/aswinbose05" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.46 1.46 0 1 0 0-2.92 1.46 1.46 0 0 0 0 2.92M7.86 18.5v-8.37H5.07v8.37h2.79Z"/></svg>
             </a>
 
-            <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="social-link">
-              GH
+            <a href="https://github.com/Aswinbose05" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
             </a>
 
-            <a href="mailto:aswinbose05@gmail.com" class="social-link">
-              @
+            <a href="mailto:aswinbose05@gmail.com" class="social-link" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             </a>
 
           </div>
 
         </div>
-
 
         <div class="footer-links">
 
@@ -1758,7 +1662,6 @@
 
         </div>
 
-
         <div class="footer-links">
 
           <h4>Focus</h4>
@@ -1773,7 +1676,6 @@
 
       </div>
 
-
       <div class="footer-bottom">
 
         <p class="mono">
@@ -1781,7 +1683,7 @@
         </p>
 
         <p class="mono">
-          <span class="dot"></span>
+          <span class="dot" style="display:inline-block;margin-right:6px;"></span>
           Open to opportunities
         </p>
 
@@ -1791,6 +1693,12 @@
 
   </footer>
 
+  <!-- ================= BACK TO TOP ================= -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
   <script src="script.js"></script>
 
